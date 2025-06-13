@@ -37,6 +37,7 @@ function Index() {
 
             <button>Donate</button>
             <h2>Donation Leaderboard</h2>
+            <h2>Contributors Leaderboard</h2>
         </div>
     );
 }
