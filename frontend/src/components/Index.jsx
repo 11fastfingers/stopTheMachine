@@ -33,18 +33,9 @@ function Index() {
                 <li> Contact our governments.</li>
                 <li> Donate to stopthemachine.org. </li>
             </ol>
-
-            <h2> Our enemies</h2>
-            <p>
-                <ol>
-                    <li> AI companies and startups (startups especially)</li>
-                    <li> Small countries (They may accept the existential risk of AI for a shot at world domination) </li>
-                    <li> Very old very rich people. (Artifical General Intelligence could solve the aging problem. If you were 85 years old and were offered a choice: 25% chance human extinction, but 75% chance of immortality? What would you choose?) </li>
-                </ol>
-            </p>
             
 
-            <button>Save Humanity</button>
+            <button>Donate</button>
             <h2>Donation Leaderboard</h2>
         </div>
     );
