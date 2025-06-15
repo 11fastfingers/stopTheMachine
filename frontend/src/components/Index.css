@@ -1,5 +1,6 @@
 #text {
-    padding-left: 25%; 
-    padding-right: 15%; 
+    width: 80vw; 
+    margin-left: 10vw; 
+    margin-right: 10vw;  
     font-size: 2rem; 
 }
