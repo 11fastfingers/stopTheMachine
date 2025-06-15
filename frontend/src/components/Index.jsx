@@ -7,24 +7,25 @@ function Index() {
             <div id="text">
                 <h1>Stop the Machine</h1>
                 <h2>AI will take our jobs.</h2>
-                <p> In ten years time, 15% to 50% of our jobs will be gone.</p>
+                <p> In ten years time, up to 50% of our jobs could vanish as AI replaces human labour across industries.</p>
 
-                <h2>AI will uproot the pillars of society.</h2>
-                <p> Over the next 20 years, the chance of major AI disruption: 
+                <h2>AI will destabalise society.</h2>
+                <p> Over the next 20 years, AI threatens to: 
                     <ul> 
-                        <li>90% news and media</li>
-                        <li>80% education</li>
-                        <li>60% legal system</li>
-                        <li>40% government</li>
+                        <li>Seize control of news and media through mass disinformation</li>
+                        <li>Collapse higher education as credentials lose value</li>
+                        <li>Undermine the legal system and courts</li>
+                        <li>Disrupt governments and political stability worldwide</li>
                     </ul>
                 </p>
                 <h2>AI could wipe out humanity. </h2>
-                <p> AI is the greatest existential threat to humanity. 1% - 90% chance that AI will cause human extinction over the next 100 years.
+                <p> AI is the greatest existential threat to humanity. While individual estimates vary, all serious experts agree that the risk is real - and rising. 
+                    Some estimate a 10% chance of extinction over the next 100 years. Others warn it may be as high as 90%. 
                 </p>
                 
                 <h2>Time is running out</h2>
-                <p> We have 5 to 40 years before Artifical General Intelligence is created. Once that happens, it's game over. 
-                    Humans become irrelevant, and possibly extinct.
+                <p> We have 5 to 15 years before Artifical General Intelligence is created. Once that happens, it's game over. Humans become irrelevant - and likely extinct.
+                    We must act now - before it is too late. 
                 </p>
 
                 <h2> What can we do about it?</h2>
