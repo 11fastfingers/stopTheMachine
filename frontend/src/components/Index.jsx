@@ -1,7 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Index.css';
+import upArrow from '../images/upArrow.png';
+import downArrow from '../images/downArrow.png';
+
 
 function Index() {
+
+
+
+    const [openDropdowns, setOpenDropdowns] = useState({
+        Info: false,
+        terms: false,
+        privacy: false,
+        contact: false
+    });
+
+    const toggleDropdown = (key) => {
+        setOpenDropdowns(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    };
+
+    const renderDropdown = (key, title, content) => (
+        <div className={`dropdown ${openDropdowns[key] ? 'open' : ''}`}>
+            <div className="dropdown-header" onClick={() => toggleDropdown(key)}>
+                <span>{title}</span>
+                <img
+                    src={openDropdowns[key] ? upArrow : downArrow}
+                    alt="toggle dropdown"
+                    className="arrow"
+                />
+            </div>
+            {openDropdowns[key] && (
+                <div className="dropdown-content">{content}</div>
+            )}
+        </div>
+    );
+
     return (
         <div>
             <div id="text">
@@ -31,20 +67,61 @@ function Index() {
 
                 <h2> What can we do about it?</h2>
                 <ol>
-                    <li> Spread the word</li>
-                    <li> Avoid AI products</li>
-                    <li> Vote with our dollars.</li>
-                    <li> Contact our governments.</li>
-                    <li> Join the Stop The Machine movement</li>
-                    <li> Donate or Volunteer</li>
+                    <li>
+                        {renderDropdown("Spread the Word", "Spread the Word", (
+                            <p>
+                                Most people have no idea about this. 
+                            </p>
+                        ))}
+                    </li>
+                    <li>
+                        {renderDropdown("Avoid AI Products", "Avoid AI Products", (
+                            <p>
+                                Most people have no idea about this. 
+                            </p>
+                        ))}
+                    </li>
+                    <li>
+                        {renderDropdown("Vote with our Dollars", "Vote with our Dollars", (
+                            <p>
+                                Most people have no idea about this. 
+                            </p>
+                        ))}
+                    </li>
+                    <li>
+                        {renderDropdown("Contact our Governments", "Contact our Governments", (
+                            <p>
+                                Most people have no idea about this. 
+                            </p>
+                        ))}
+                    </li>
+                    <li>
+                        {renderDropdown("Join the Movement", "Join the Movement", (
+                            <p>
+                                Most people have no idea about this. 
+                            </p>
+                        ))}
+                    </li>
+                    <li>
+                        {renderDropdown("Donate", "Donate", (
+                            <button>Donate</button>
+                        ))}
+                    </li>
+                    <li>
+                        {renderDropdown("Volunteer", "Volunteer", (
+                            <p>
+                                Most people have no idea about this. 
+                            </p>
+                        ))}
+                    </li>
                     
                 </ol>
                 
 
-                <button>Donate</button>
+                
                 <h2>Donation Leaderboard</h2>
                 <h2>Donation Spending</h2>
-                <h2>Contributors Leaderboard</h2>
+                <h2>Volunteer Leaderboard</h2>
             </div>
         </div>
     );
