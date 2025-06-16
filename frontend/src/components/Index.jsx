@@ -69,19 +69,35 @@ function Index() {
                 <ol>
                     <li>
                         {renderDropdown("Spread the Word", "Spread the Word", (
-                            <ul>
-                                <li>Tell your friends and family</li>
-                                <li>Post on Social media</li>
-                                <li>Mention AI risk at school or work</li>
-                                <li>Contact your Government</li>
-                            </ul>
+                            <div>
+                                <ul>
+                                    <li>Tell your friends and family</li>
+                                    <li>Post on Social media</li>
+                                    <li>Mention AI risk at school or work</li>
+                                    <li>Contact your Government</li>
+                                </ul>
+
+                            <span> links:  </span>
+                                <ul> 
+                                    <li>Stop The Machine: <a href="https://stopthemachine.org">https://stopthemachine.org</a></li>
+                                    <li>PauseAI <a href="https://pauseai.info">https://pauseai.info</a></li>
+                                    <li>Statement on AI risk of Extinction: <a href="https://en.wikipedia.org/wiki/Statement_on_AI_risk_of_extinction">https://en.wikipedia.org/wiki/Statement_on_AI_risk_of_extinction</a></li>
+                                </ul>
+
+                            </div>
+                            
+                            
                         ))}
                     </li>
                     <li>
                         {renderDropdown("Avoid AI Products", "Avoid AI Products", (
-                            <p>
-                                Most people have no idea about this. 
-                            </p>
+                            <div>
+                                <ul>
+                                    <li>By using AI products, AI models get smarter and smarter</li>
+                                    <li>Do not spend money on AI services </li>
+                                    <li>Do not invest in AI</li>
+                                </ul>
+                            </div>
                         ))}
                     </li>
                     <li>
