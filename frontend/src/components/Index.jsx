@@ -69,27 +69,16 @@ function Index() {
                 <ol>
                     <li>
                         {renderDropdown("Spread the Word", "Spread the Word", (
-                            <p>
-                                Most people have no idea about this. 
-                            </p>
+                            <ul>
+                                <li>Tell your friends and family</li>
+                                <li>Post on Social media</li>
+                                <li>Mention AI risk at school or work</li>
+                                <li>Contact your Government</li>
+                            </ul>
                         ))}
                     </li>
                     <li>
                         {renderDropdown("Avoid AI Products", "Avoid AI Products", (
-                            <p>
-                                Most people have no idea about this. 
-                            </p>
-                        ))}
-                    </li>
-                    <li>
-                        {renderDropdown("Vote with our Dollars", "Vote with our Dollars", (
-                            <p>
-                                Most people have no idea about this. 
-                            </p>
-                        ))}
-                    </li>
-                    <li>
-                        {renderDropdown("Contact our Governments", "Contact our Governments", (
                             <p>
                                 Most people have no idea about this. 
                             </p>
