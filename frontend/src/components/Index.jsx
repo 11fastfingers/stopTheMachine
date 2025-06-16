@@ -25,7 +25,7 @@ function Index() {
                 
                 <h2>Time is running out</h2>
                 <p> We have 5 to 15 years before Artificial General Intelligence is created. Once that happens, it's game over. Humans become irrelevant - and likely extinct.
-                    We must act now to prevent the creation of an artificial superintelligence. AI is a threat to, me, it is a threat to you, it is a threat to all of us.
+                    We must act now to prevent the creation of an artificial superintelligence. AI is a threat to me, it is a threat to you, it is a threat to all of us.
                     We must act now - before it is too late. 
                 </p>
 
