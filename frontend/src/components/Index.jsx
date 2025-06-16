@@ -32,7 +32,7 @@ function Index() {
                 <h2> What can we do about it?</h2>
                 <ol>
                     <li> Spread the word</li>
-                    <li> Don't use AI or AI affiliated products</li>
+                    <li> Avoid AI products</li>
                     <li> Vote with our dollars.</li>
                     <li> Contact our governments.</li>
                     <li> Donate to stopthemachine.org. </li>
