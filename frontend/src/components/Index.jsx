@@ -92,19 +92,44 @@ function Index() {
                     <li>
                         {renderDropdown("Avoid AI Products", "Avoid AI Products", (
                             <div>
-                                <ul>
-                                    <li>By using AI products, AI models get smarter and smarter</li>
-                                    <li>Do not spend money on AI services </li>
-                                    <li>Do not invest in AI</li>
-                                </ul>
+                                <br></br>
+                                <b>Don't Make AI smarter</b>
+                                <p>    
+                                    By using AI products, AI models get smarter and smarter. 
+                                    So avoid using AI products whenever possible.
+                                </p>
+                                <p>
+                                    If you must use AI, avoid giving feedback. Human feedback is essential to the development of large language models. 
+                                    Even better, give misinformation. E.g if ChatGPT asks you which of two options you prefer, 
+                                    choose the option you like the least.
+                                </p>
+
+                                <b>Vote with your Dollars</b> 
+                                <p>
+                                   Do not purchase any AI products. You will be directly funding AI development. 
+                                   If you must use AI, always use the free version. If you are a decision maker at a company, think twice
+                                   before integrating AI. The short term savings are tempting. But long term you will be funding your own replacement. 
+                                </p>
+                                <p>
+                                   Do not invest in AI. Startup AI companies are especially dangerous, as they can innovate rapidly.
+                                </p>
+                                <p>
+                                   Even if you are wealthy, investing in AI is a bad idea. AI is a direct threat to all of your non-ai investments. 
+                                   More importantly, you cannot own or control something smarter than you. Once artificial general intelligence is created, 
+                                   you will lose control. Your wealth will be destroyed. You could die. 
+                                </p>
                             </div>
                         ))}
                     </li>
                     <li>
                         {renderDropdown("Join the Movement", "Join the Movement", (
-                            <p>
-                                Most people have no idea about this. 
-                            </p>
+                            <div>
+                                <br></br>
+                                <div>Reddit: <a href="">r/stopthemachine</a></div>
+                                <div>Discord: </div>
+                            
+                            </div>
+                            
                         ))}
                     </li>
                     <li>
