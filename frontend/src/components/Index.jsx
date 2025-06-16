@@ -9,7 +9,7 @@ function Index() {
                 <h2>AI will take our jobs.</h2>
                 <p> In ten years time, up to 50% of our jobs could vanish as AI replaces human labour across industries.</p>
 
-                <h2>AI will destabalise society.</h2>
+                <h2>AI will destabalize society.</h2>
                 <p> Over the next 20 years, AI threatens to: 
                     <ul> 
                         <li>Seize control of news and media through mass disinformation</li>
@@ -24,9 +24,9 @@ function Index() {
                 </p>
                 
                 <h2>Time is running out</h2>
-                <p> We have 5 to 15 years before Artifical General Intelligence is created. Once that happens, it's game over. Humans become irrelevant - and likely extinct.
-                    We must act now to prevent the creation of an artificial superintelligence. AI is a threat to me, it is a threat to you, it is a threat to all of us. 
-                    We cannot control something more intelligent then ourselves. We must act - before it is too late. 
+                <p> We have 5 to 15 years before Artificial General Intelligence is created. Once that happens, it's game over. Humans become irrelevant - and likely extinct.
+                    We must act now to prevent the creation of an artificial superintelligence. AI is a threat to, me, it is a threat to you, it is a threat to all of us.
+                    We must act now - before it is too late. 
                 </p>
 
                 <h2> What can we do about it?</h2>
