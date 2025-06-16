@@ -35,8 +35,9 @@ function Index() {
                     <li> Avoid AI products</li>
                     <li> Vote with our dollars.</li>
                     <li> Contact our governments.</li>
-                    <li> Donate to stopthemachine.org. </li>
-                    <li> Volunteer to stopthemachine.org. </li>
+                    <li> Join the Stop The Machine movement</li>
+                    <li> Donate or Volunteer</li>
+                    
                 </ol>
                 
 
