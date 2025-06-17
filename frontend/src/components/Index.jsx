@@ -134,24 +134,26 @@ function Index() {
                     </li>
                     <li>
                         {renderDropdown("Donate", "Donate", (
-                            <button>Donate</button>
+                            <div>
+                                <p> Total Donations: $0</p>
+                                <p> Donation Leaderboard</p>
+                                <p> Spending Distribution</p>
+                            </div>
+                           
                         ))}
                     </li>
                     <li>
                         {renderDropdown("Volunteer", "Volunteer", (
-                            <p>
-                                Most people have no idea about this. 
-                            </p>
+                            <div>
+                                <p>Volunteer Leaderboard</p>
+                            </div>
+                            
                         ))}
                     </li>
                     
                 </ol>
                 
 
-                
-                <h2>Donation Leaderboard</h2>
-                <h2>Donation Spending</h2>
-                <h2>Volunteer Leaderboard</h2>
             </div>
         </div>
     );
