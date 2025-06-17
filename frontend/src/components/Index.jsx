@@ -111,7 +111,7 @@ function Index() {
                                    before integrating AI. The short term savings and productivity gains are tempting. But long term you will be funding your own replacement. 
                                 </p>
                                 <p>
-                                   Do not invest in AI. Startup AI companies are especially dangerous to invest in. They can move fast, can innovate rapidly, and will be reckless in their development of artificial intelligence.
+                                   Do not invest in AI. Startup AI companies are especially dangerous to invest in. They can move fast, can innovate rapidly, and are reckless in their development of artificial intelligence.
                                 </p>
                                 <p>
                                    Even if you are wealthy, investing in AI is a bad idea. AI is a direct threat to all of your non-ai investments. 
@@ -125,8 +125,8 @@ function Index() {
                         {renderDropdown("Join the Movement", "Join the Movement", (
                             <div>
                                 <br></br>
-                                <div>Reddit: <a href="">r/stopthemachine</a></div>
-                                <div>Discord: </div>
+                                <div>Reddit: <a href="https://www.reddit.com/r/stopthemachine/">https://www.reddit.com/r/stopthemachine/</a></div>
+                                <div>Discord: <a href="https://discord.gg/jutT6WB9">https://discord.gg/jutT6WB9</a></div>
                             
                             </div>
                             
