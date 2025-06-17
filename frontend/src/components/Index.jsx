@@ -138,6 +138,7 @@ function Index() {
                                 <p> Total Donations: $0</p>
                                 <p> Donation Leaderboard</p>
                                 <p> Spending Distribution</p>
+                                <p> Donate </p>
                             </div>
                            
                         ))}
@@ -145,10 +146,24 @@ function Index() {
                     <li>
                         {renderDropdown("Volunteer", "Volunteer", (
                             <div>
-                                <p>Volunteer Leaderboard</p>
+                                <br></br>
+                                <ul>Major Contributors:
+                                    <li> James Spencer (founder)
+                                        
+                                        <div> -leadership and vision</div>
+                                        <div> -community building</div>
+                                        <div> -recruitment</div>
+                                        <div> -web development</div>
+                                        <div> -graphic design</div>
+                                        
+                                    </li>
+                                    
+                                </ul>
+
                             </div>
                             
                         ))}
+                        <br></br>
                     </li>
                     
                 </ol>
