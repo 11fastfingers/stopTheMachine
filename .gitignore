@@ -4,6 +4,8 @@ node_modules/
 database.sqlite
 data/
 
+backend/secrets.env
+
 # Logs
 logs
 *.log
