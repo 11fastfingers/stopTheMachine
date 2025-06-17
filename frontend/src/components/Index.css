@@ -41,3 +41,13 @@
     margin-left: 0.9rem;
     flex-shrink: 0; /* Prevents resizing */
 }
+
+#donation-form input {
+    margin-left: 0.5rem; 
+    font-size: 2rem; 
+}
+
+#donation-form select {
+    margin-left: 0.5rem;
+    font-size: 2rem; 
+}
