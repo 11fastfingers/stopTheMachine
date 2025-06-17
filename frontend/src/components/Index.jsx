@@ -81,6 +81,7 @@ function Index() {
                                 <ul> 
                                     <li>Stop The Machine: <a href="https://stopthemachine.org">https://stopthemachine.org</a></li>
                                     <li>PauseAI <a href="https://pauseai.info">https://pauseai.info</a></li>
+                                    <li>StopAI <a href="https://stopai.info">https://stopai.info</a></li>
                                     <li>Statement on AI risk of Extinction: <a href="https://en.wikipedia.org/wiki/Statement_on_AI_risk_of_extinction">https://en.wikipedia.org/wiki/Statement_on_AI_risk_of_extinction</a></li>
                                 </ul>
 
