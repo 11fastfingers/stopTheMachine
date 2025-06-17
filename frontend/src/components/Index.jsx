@@ -108,10 +108,10 @@ function Index() {
                                 <p>
                                    Do not purchase any AI products. You will be directly funding AI development. 
                                    If you must use AI, always use the free version. If you are a decision maker at a company, think twice
-                                   before integrating AI. The short term savings are tempting. But long term you will be funding your own replacement. 
+                                   before integrating AI. The short term savings and productivity gains are tempting. But long term you will be funding your own replacement. 
                                 </p>
                                 <p>
-                                   Do not invest in AI. Startup AI companies are especially dangerous, as they can innovate rapidly.
+                                   Do not invest in AI. Startup AI companies are especially dangerous to invest in. They can move fast, can innovate rapidly, and will be reckless in their development of artificial intelligence.
                                 </p>
                                 <p>
                                    Even if you are wealthy, investing in AI is a bad idea. AI is a direct threat to all of your non-ai investments. 
