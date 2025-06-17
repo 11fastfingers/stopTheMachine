@@ -161,6 +161,7 @@ function Index() {
                     <li>
                         {renderDropdown("Donate", "Donate", (
                             <div>
+                                <br></br>
                                 <form id="donation-form" onSubmit={handleDonationSubmit}>
 
                                     <label>Amount:</label>
@@ -200,7 +201,7 @@ function Index() {
                                         <option value="THB">THB - Thai Baht</option>
                                         <option value="TRY">TRY - Turkish Lira</option>
                                         <option value="TWD">TWD - New Taiwan Dollar</option>
-                                        <option value="USD">USD - United States Dollar</option>
+                                        <option value="USD" selected>USD - United States Dollar</option>
                                         <option value="ZAR">ZAR - South African Rand</option>
                                     </select>
                                     <br></br>
