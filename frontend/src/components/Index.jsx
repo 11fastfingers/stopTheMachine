@@ -207,6 +207,7 @@ function Index() {
 
                                     <label>Name: (optional)</label>
                                     <input type="text" name="name" required/>
+                                    <button>Donate</button>
                                     <br></br>
 
                                 </form>
@@ -215,7 +216,6 @@ function Index() {
                                 <p> Total Donations: $0</p>
                                 <p> Donation Leaderboard</p>
                                 <p> Spending Distribution</p>
-                                <p> Donate </p>
                             </div>
                            
                         ))}
