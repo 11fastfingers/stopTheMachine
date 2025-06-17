@@ -205,7 +205,7 @@ function Index() {
                                     </select>
                                     <br></br>
 
-                                    <label>Name:</label>
+                                    <label>Name: (optional)</label>
                                     <input type="text" name="name" required/>
                                     <br></br>
 
