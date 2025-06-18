@@ -58,7 +58,7 @@ function Index() {
         const data = await response.json();
         const stripe = await stripePromise;
     
-        stripe.redirectToCheckout({ url: data.url });
+        stripe.redirectToCheckout({ sessionId: data.url });
     }
 
 
