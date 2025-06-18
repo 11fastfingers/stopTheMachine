@@ -87,7 +87,7 @@ app.post('/donate', async (req, res) => {
           cancel_url: 'https://stopthemachine.org',
       });
 
-      res.json({ url: session.url });
+      res.json({ id: session.id });
   } catch (error) {
       res.status(500).json({ error: error.message });
   }
