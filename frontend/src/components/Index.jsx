@@ -168,7 +168,6 @@ function Index() {
                                     <label>Amount:</label>
                                     <input type="number" name="donationAmount" required min="1" step="0.01"/>
                                     <br></br>
-
                                     <label>Currency:</label>
                                     <select name="currency" defaultValue="USD" required>
                                         <option value="AED">AED - United Arab Emirates Dirham</option>
@@ -209,7 +208,8 @@ function Index() {
 
                                     <label>Name: (optional)</label>
                                     <input type="text" name="name"/>
-                                    <div><button>Donate</button></div>
+                                    <br></br><br></br>
+                                    <div><button id="donate-button">Donate</button></div>
                                     
                                     <br></br>
 
@@ -239,6 +239,10 @@ function Index() {
                                     </li>
                                     
                                 </ul>
+
+                                <br />
+                                <p> All code is open source and can be publically viewed: <a href="https://github.com/11fastfingers/stopTheMachine">https://github.com/11fastfingers/stopTheMachine</a> </p>
+
 
                             </div>
                             
