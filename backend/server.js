@@ -48,53 +48,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
-app.use(express.json());
-
-
-app.get('/', (req, res) => {
-    res.send('backend is running');
-});
-
-
-app.post('/donate', async (req, res) => {
-  const { amount, currency} = req.body;
-  let name = req.body.name || 'Anonymous';
-  // validate input
-  if (
-    typeof amount !== 'number' ||
-    amount <= 0 ||
-    typeof currency !== 'string' ||
-    !/^[a-zA-Z]{3}$/.test(currency)
-  ) {
-    return res.status(400).json({ error: 'Invalid amount or currency' });
-  }
-
-  try {
-      const session = await stripe.checkout.sessions.create({
-          mode: 'payment',
-          line_items: [{
-              price_data: {
-                  currency: currency.toUpperCase(),
-                  product_data: {
-                      name: `Donation to Stop the Machine`,
-                      
-                  },
-                  unit_amount: Math.round(amount * 100), // amount in cents
-              },
-              quantity: 1,
-          }],
-          success_url: 'https://stopthemachine.org',
-          cancel_url: 'https://stopthemachine.org',
-            metadata: {
-                name: name
-            },
-      });
-
-      res.json({ id: session.id });
-  } catch (error) {
-      res.status(500).json({ error: error.message });
-  }
-});
 
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -181,6 +134,57 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 
     res.sendStatus(200);
 });
+
+
+app.use(express.json()); // Must be after the stripe webhook 
+
+
+app.get('/', (req, res) => {
+    res.send('backend is running');
+});
+
+
+app.post('/donate', async (req, res) => {
+  const { amount, currency} = req.body;
+  let name = req.body.name || 'Anonymous';
+  // validate input
+  if (
+    typeof amount !== 'number' ||
+    amount <= 0 ||
+    typeof currency !== 'string' ||
+    !/^[a-zA-Z]{3}$/.test(currency)
+  ) {
+    return res.status(400).json({ error: 'Invalid amount or currency' });
+  }
+
+  try {
+      const session = await stripe.checkout.sessions.create({
+          mode: 'payment',
+          line_items: [{
+              price_data: {
+                  currency: currency.toUpperCase(),
+                  product_data: {
+                      name: `Donation to Stop the Machine`,
+                      
+                  },
+                  unit_amount: Math.round(amount * 100), // amount in cents
+              },
+              quantity: 1,
+          }],
+          success_url: 'https://stopthemachine.org',
+          cancel_url: 'https://stopthemachine.org',
+            metadata: {
+                name: name
+            },
+      });
+
+      res.json({ id: session.id });
+  } catch (error) {
+      res.status(500).json({ error: error.message });
+  }
+});
+
+
 
 
 
