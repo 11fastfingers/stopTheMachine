@@ -46,12 +46,13 @@ function Index() {
         const form = event.target;
         const amount = form.donationAmount.value;
         const currency = form.currency.value;
+        const name = form.name.value || 'Anonymous';
 
 
         const response = await fetch('http://localhost:4242/create-checkout-session', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ amount, currency }),
+            body: JSON.stringify({ amount, currency, name }),
         });
     
         const data = await response.json();
@@ -169,7 +170,7 @@ function Index() {
                                     <br></br>
 
                                     <label>Currency:</label>
-                                    <select name="currency" required>
+                                    <select name="currency" defaultValue="USD" required>
                                         <option value="AED">AED - United Arab Emirates Dirham</option>
                                         <option value="AUD">AUD - Australian Dollar</option>
                                         <option value="BRL">BRL - Brazilian Real</option>
@@ -201,7 +202,7 @@ function Index() {
                                         <option value="THB">THB - Thai Baht</option>
                                         <option value="TRY">TRY - Turkish Lira</option>
                                         <option value="TWD">TWD - New Taiwan Dollar</option>
-                                        <option value="USD" selected>USD - United States Dollar</option>
+                                        <option value="USD">USD - United States Dollar</option>
                                         <option value="ZAR">ZAR - South African Rand</option>
                                     </select>
                                     <br></br>
