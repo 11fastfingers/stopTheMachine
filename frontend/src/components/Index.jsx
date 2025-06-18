@@ -208,7 +208,7 @@ function Index() {
                                     <br></br>
 
                                     <label>Name: (optional)</label>
-                                    <input type="text" name="name" required/>
+                                    <input type="text" name="name"/>
                                     <div><button>Donate</button></div>
                                     
                                     <br></br>
