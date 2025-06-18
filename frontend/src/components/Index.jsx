@@ -43,9 +43,6 @@ function Index() {
     const handleDonationSubmit = async (event) => {
         event.preventDefault();
 
-        console.log(BASE_URL); 
-
-
         const form = event.target;
         const amount = parseFloat(form.donationAmount.value);
         const currency = form.currency.value;
