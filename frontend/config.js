@@ -3,7 +3,7 @@ if (process.env.NODE_ENV === "production") {
     BASE_URL = "https://stopthemachine.org"; 
 }
 else {
-    BASE_URL = "http://localhost:3000"; 
+    BASE_URL = "http://localhost:5173"; 
 }
 
-export {BASE_URL}; 
+export default {BASE_URL}; 
