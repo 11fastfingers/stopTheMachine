@@ -20,23 +20,30 @@
 
 */ 
 
+DROP TABLE donor; 
 CREATE TABLE donor (
-    id INTEGER PRIMARY KEY, 
-    name TEXT DEFAULT 'Anonymous'
+    name TEXT PRIMARY KEY
 ); 
 
+DROP TABLE donation;
 CREATE TABLE donation (
     id INTEGER PRIMARY KEY, 
-    donor_id INTEGER NOT NULL, 
+    donor_name TEXT, 
     amount INTEGER NOT NULL, 
-    donated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (donor_id) REFERENCES donor(id) ON DELETE CASCADE 
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (donor_name) REFERENCES donor(name) ON DELETE CASCADE 
 );
 
 
-
-
+DROP TABLE total_donations; 
 CREATE TABLE total_donations (
     id INTEGER PRIMARY KEY, 
-    total INTEGER
+    total INTEGER DEFAULT 0
+); 
+
+
+CREATE TABLE spending (
+  id INTEGER PRIMARY KEY,
+  account TEXT, /*  e.g cash    */ 
+  total INTEGER  /* e.g 500 00 */ 
 ); 

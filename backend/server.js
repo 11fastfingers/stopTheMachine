@@ -85,6 +85,9 @@ app.post('/donate', async (req, res) => {
           }],
           success_url: 'https://stopthemachine.org',
           cancel_url: 'https://stopthemachine.org',
+            metadata: {
+                name: name
+            },
       });
 
       res.json({ id: session.id });
@@ -94,6 +97,85 @@ app.post('/donate', async (req, res) => {
 });
 
 
+const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
+app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
+    const sig = req.headers['stripe-signature'];
+    let event;
+
+    try {
+        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+    } catch (err) {
+        console.error('Webhook signature verification failed.', err.message);
+        return res.sendStatus(400);
+    }
+
+    if (event.type === 'payment_intent.succeeded') {
+        const paymentIntent = event.data.object;
+
+        try {
+            // Get full details including amount and currency
+            const amount = paymentIntent.amount_received;
+            const currency = paymentIntent.currency.toUpperCase();
+
+            // Fetch Stripe's conversion rate to USD
+            const exchangeRates = await stripe.exchangeRates.retrieve(currency.toLowerCase());
+            const rateToUSD = exchangeRates.rates['usd'];
+
+            if (!rateToUSD) {
+                throw new Error(`No exchange rate from ${currency} to USD`);
+            }
+
+            const amountInUSD = amount * rateToUSD;
+
+            // get name
+            const name = paymentIntent.metadata?.name || 'Anonymous';
+
+            // donor name inserted if necessary 
+            if (name !== 'Anonymous') {
+                const stmt = db.prepare('INSERT OR IGNORE INTO donor (name) VALUES (?)');
+                const result = stmt.run(name);
+                if (result.changes > 0) {
+                    console.log(`Inserted donor: ${name}`);
+                } else {
+                    console.log(`Donor already exists: ${name}`);
+                }
+            }
+
+            // update donation table 
+            if (name !== 'Anonymous') {
+                const donation = db.prepare(`
+                    INSERT INTO donation (donor_name, amount) 
+                    VALUES (?, ?)
+                `);
+                donation.run(name, amountInUSD);
+            } else {
+                const donation = db.prepare(`
+                    INSERT INTO donation (amount) 
+                    VALUES (?)
+                `);
+                donation.run(amountInUSD);
+            } 
+
+
+            // update total donations 
+            const update = db.prepare(`
+                UPDATE total_donations 
+                SET total = total + ? 
+                WHERE id = 1
+            `);
+            update.run(amountInUSD);
+
+            // update spending, need to insert into
+            
+
+        } catch (error) {
+            console.error('Error processing donation:', error.message);
+            return res.sendStatus(500);
+        }
+    }
+
+    res.sendStatus(200);
+});
 
 
 
