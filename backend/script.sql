@@ -8,6 +8,16 @@
     -> So I need a donor table which stores the names
     -> I need a donation table which stores the name and the amount donated. FK names. 
 
+    -> Storing total donations could be useful, it would have to be increased incrementally. This is much more efficient than constantly summing the donation table. 
+
+    -> I also need to represent the spending as a database. 
+
+    In terms of transparancy, I want there to be: 
+    - the pie chart of spending 
+    - Total donations could be like the heading... yes... that makes sense. 
+    
+    Overall, I want great detail for this... 
+
 */ 
 
 CREATE TABLE donor (
@@ -22,3 +32,11 @@ CREATE TABLE donation (
     donated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (donor_id) REFERENCES donor(id) ON DELETE CASCADE 
 );
+
+
+
+
+CREATE TABLE total_donations (
+    id INTEGER PRIMARY KEY, 
+    total INTEGER
+); 

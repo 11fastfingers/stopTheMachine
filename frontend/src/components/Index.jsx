@@ -141,7 +141,7 @@ function Index() {
                                    Do not invest in AI. Startup AI companies are especially dangerous to invest in. They can move fast, can innovate rapidly, and are reckless in their development of artificial intelligence.
                                 </p>
                                 <p>
-                                   Even if you are wealthy, investing in AI is a bad idea. AI is a direct threat to all of your non-ai investments. 
+                                   Even if you are wealthy, investing in AI is a bad idea. AI is a direct threat to all of your non-AI investments. 
                                    More importantly, you cannot own something vastly more intelligent than you are. Once artificial general intelligence is created, 
                                    you will lose control. Your wealth will be destroyed. You could die. 
                                 </p>
@@ -217,8 +217,9 @@ function Index() {
 
 
                                 <p> Total Donations: $0</p>
-                                <p> Donation Leaderboard</p>
                                 <p> Spending Distribution</p>
+                                <p> Donation Leaderboard</p>
+                               
                             </div>
                            
                         ))}
