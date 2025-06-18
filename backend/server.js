@@ -57,8 +57,8 @@ app.get('/', (req, res) => {
 
 
 app.post('/donate', async (req, res) => {
-  const { amount, currency, name } = req.body;
-
+  const { amount, currency} = req.body;
+  let name = req.body.name || 'Anonymous';
   // validate input
   if (
     typeof amount !== 'number' ||
@@ -76,8 +76,8 @@ app.post('/donate', async (req, res) => {
               price_data: {
                   currency: currency.toUpperCase(),
                   product_data: {
-                      name: 'Donation',
-                      donor_name: name || 'Anonymous'
+                      name: `Donation from ${name}`,
+                      
                   },
                   unit_amount: Math.round(amount * 100), // amount in cents
               },
