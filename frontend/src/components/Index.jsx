@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Index.css';
 import upArrow from '../images/upArrow.png';
 import downArrow from '../images/downArrow.png';
-
+import BASE_URL from '../config.js';
 
 import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGPHQsIMK4qGunf6XiQfS3sB1aCabisxDwgQEBSg0Q1ndwxOXxyAtP00vIyFBEH4'); // Your Stripe Publishable Key
@@ -49,7 +49,7 @@ function Index() {
         const name = form.name.value || 'Anonymous';
 
 
-        const response = await fetch('http://localhost:4242/create-checkout-session', {
+        const response = await fetch(`${BASE_URL}/donate`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount, currency, name }),
