@@ -38,7 +38,7 @@ CREATE TABLE donation (
 DROP TABLE total_donations; 
 CREATE TABLE total_donations (
     id INTEGER PRIMARY KEY, 
-    total INTEGER DEFAULT 0
+    total INTEGER DEFAULT 1
 ); 
 
 
