@@ -76,7 +76,7 @@ app.post('/donate', async (req, res) => {
               price_data: {
                   currency: currency.toUpperCase(),
                   product_data: {
-                      name: `Donation from ${name}`,
+                      name: `Donation from ${name} to Stop the Machine`,
                       
                   },
                   unit_amount: Math.round(amount * 100), // amount in cents
