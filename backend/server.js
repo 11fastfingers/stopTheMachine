@@ -117,15 +117,20 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
             const amount = paymentIntent.amount_received;
             const currency = paymentIntent.currency.toUpperCase();
 
-            // Fetch Stripe's conversion rate to USD
-            const exchangeRates = await stripe.exchangeRates.retrieve(currency.toLowerCase());
-            const rateToUSD = exchangeRates.rates['usd'];
-
-            if (!rateToUSD) {
-                throw new Error(`No exchange rate from ${currency} to USD`);
+            let amountInUSD; 
+            if (currency !== 'USD') {
+                // Fetch Stripe's conversion rate to USD
+                const exchangeRates = await stripe.exchangeRates.retrieve(currency.toLowerCase());
+                const rateToUSD = exchangeRates.rates['usd'];
+                if (!rateToUSD) {
+                    throw new Error(`No exchange rate from ${currency} to USD`);
+                }
+                amountInUSD = amount * rateToUSD;
+            } else {
+                amountInUSD = amount;
             }
-
-            const amountInUSD = amount * rateToUSD;
+            
+            
 
             // get name
             const name = paymentIntent.metadata?.name || 'Anonymous';
