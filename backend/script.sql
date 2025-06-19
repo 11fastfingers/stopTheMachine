@@ -33,8 +33,12 @@ CREATE TABLE total_spending (
 INSERT INTO total_spending (id) VALUES (1);
 
 
+CREATE TABLE pending (
+    id INTEGER PRIMARY KEY, 
+    total INTEGER DEFAULT 0
+); 
+INSERT INTO pending (id) VALUES (1);
 
-INSERT INTO spending (account, total) VALUES ('stripe', 0);
 
 
 DROP TABLE spending; 
@@ -43,7 +47,7 @@ CREATE TABLE spending (
   account TEXT, /*  e.g cash    */ 
   amount INTEGER DEFAULT 0 /* e.g 500 00 */ 
 ); 
-
+INSERT INTO spending (account, total) VALUES ('stripe', 0);
 
 
 
@@ -57,10 +61,26 @@ BEGIN
 END;
 
 
-
+DROP TRIGGER update_total_spending_after_insert; 
 CREATE TRIGGER update_total_spending_after_insert
 AFTER INSERT ON spending
 BEGIN
     UPDATE total_spending
-    SET total = total + NEW.total;
+    SET total = total + NEW.amount;
+END;
+
+
+CREATE TRIGGER update_pending_after_spending
+AFTER UPDATE ON total_spending
+BEGIN
+    UPDATE pending
+    SET total = (SELECT total FROM total_donations WHERE id = 1) - (SELECT total FROM total_spending WHERE id = 1);
+END;
+
+CREATE TRIGGER update_pending_after_donation
+AFTER UPDATE ON total_donations
+BEGIN
+    UPDATE pending
+    SET total = (SELECT total FROM total_donations WHERE id = 1)
+              - (SELECT total FROM total_spending WHERE id = 1);
 END;

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useEffect } from 'react';
 import './Index.css';
 import upArrow from '../images/upArrow.png';
 import downArrow from '../images/downArrow.png';
@@ -8,6 +9,13 @@ import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGPHQsIMK4qGunf6XiQfS3sB1aCabisxDwgQEBSg0Q1ndwxOXxyAtP00vIyFBEH4'); // Your Stripe Publishable Key
 
 function Index() {
+
+
+
+
+    const [totalDonations, setTotalDonations] = useState(null);
+
+
 
 
 
@@ -39,6 +47,40 @@ function Index() {
             )}
         </div>
     );
+
+
+
+    
+
+    useEffect(() => {
+        const fetchInfo = async () => {
+            try {
+                const response = await fetch(`${BASE_URL}/info`);
+                const data = await response.json();
+    
+                // Convert cents to dollars and store as number
+                setTotalDonations((data.total_donations ?? 0) / 100);
+            } catch (err) {
+                console.error('Failed to fetch backend info:', err);
+            }
+        };
+        fetchInfo();
+    }, []);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     const handleDonationSubmit = async (event) => {
         event.preventDefault();
@@ -184,7 +226,17 @@ function Index() {
                                 </form>
 
 
-                                <p> Total Donations: $0</p>
+                                <p> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</p>
+                            {/*
+                            
+                                So what I want to do is fetch some stuff from the backend.
+                                I want to fetch the total donations, the 
+                            
+                            */ }
+
+
+
+
                                 <p> Spending Distribution</p>
                                 <p> Donation Leaderboard</p>
                                

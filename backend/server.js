@@ -233,6 +233,14 @@ async function getStripeFeeWithRetry(chargeId, currency) {
 
 
 
+app.get('/info', (req, res) => {
+    const row = db.prepare('SELECT total FROM total_donations WHERE id = 1').get();
+
+    res.json({
+        total_donations: row?.total ?? 0
+    });
+});
+
 
 
 
