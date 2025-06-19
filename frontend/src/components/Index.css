@@ -62,6 +62,14 @@
     cursor: pointer; 
 }
 
+#no-margin li{
+    margin: 0;
+}
+
+ul li {
+    margin: 0; 
+}
+
 /* Phone */  
 @media (max-width: 600px) {
     #text {

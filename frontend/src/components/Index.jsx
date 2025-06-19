@@ -134,7 +134,7 @@ function Index() {
                 </p>
 
                 <h2> What can we do about it?</h2>
-                <ol>
+                <ol id="no-margin">
                     <li>
                         {renderDropdown("Spread the Word", "Spread the Word", (
                             <div>
