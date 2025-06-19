@@ -197,8 +197,6 @@ function Index() {
                             <div>
                                 <br></br>
                                 <ul>Major Contributors:
-                                    <li> James Spencer (founder)
-                                    </li>
                                     
                                 </ul>
 
