@@ -71,8 +71,10 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 
 
         const chargeId = paymentIntent.latest_charge;
-        const charge = await stripe.charges.retrieve(chargeId);
-        const balanceTransaction = await stripe.balanceTransactions.retrieve(charge.balance_transaction);
+        const charge = await stripe.charges.retrieve(chargeId, {
+            expand: ['balance_transaction']
+        });
+        const balanceTransaction = charge.balance_transaction;
 
         let stripeFee; 
 
