@@ -138,9 +138,8 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
             const stripeFee = await getStripeFeeWithRetry(chargeId, currency);
             // update spending, need to insert into
             const spending = db.prepare(`
-                UPDATE spending
-                SET total = total + ?
-                WHERE account = 'stripe' `
+                INSERT INTO spending (account, amount)
+                VALUES ('stripe', ?)`
             );
             spending.run(stripeFee);
 
