@@ -41,7 +41,7 @@
 #text .arrow {
     height: 1.25rem;
     width: 1.25rem;
-    margin-left: 0.9rem;
+    margin-left: 0.5rem;
     flex-shrink: 0; /* Prevents resizing */
 }
 
