@@ -92,10 +92,14 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
                     throw new Error(`No exchange rate from ${currency} to USD`);
                 }
                 amountInUSD = amount * rateToUSD;
-                stripeFee = balanceTransaction.fee * rateToUSD;
+                if (balanceTransaction && balanceTransaction.fee != null) {
+                    stripeFee = balanceTransaction.fee * rateToUSD;
+                }
             } else {
                 amountInUSD = amount;
-                stripeFee = balanceTransaction.fee;
+                if (balanceTransaction && balanceTransaction.fee != null) {
+                    stripeFee = balanceTransaction.fee;
+                }
             }
             
             
