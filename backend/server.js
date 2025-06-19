@@ -52,6 +52,10 @@ app.use(cors({
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
+    
+    console.log('webhook hit'); 
+
+
     const sig = req.headers['stripe-signature'];
     let event;
 
