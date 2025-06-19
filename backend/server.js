@@ -177,9 +177,11 @@ app.post('/donate', async (req, res) => {
           }],
           success_url: 'https://stopthemachine.org',
           cancel_url: 'https://stopthemachine.org',
+          payment_intent_data: {
             metadata: {
                 name: name
             },
+          }
       });
 
       res.json({ id: session.id });
