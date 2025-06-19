@@ -67,7 +67,21 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
     }
 
     if (event.type === 'payment_intent.succeeded') {
-        const paymentIntent = event.data.object;
+        let paymentIntent = event.data.object;
+
+
+        // Get stripe charges data if not already there
+        if (!paymentIntent.charges || !paymentIntent.charges.data.length) {
+            try {
+                paymentIntent = await stripe.paymentIntents.retrieve(paymentIntent.id, {
+                    expand: ['charges']
+                });
+            } catch (err) {
+                console.error('Failed to retrieve expanded paymentIntent:', err.message);
+                return res.sendStatus(500);
+            }
+        }
+
         const chargeId = paymentIntent.charges.data[0].id;
 
         const charge = await stripe.charges.retrieve(chargeId);
