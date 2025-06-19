@@ -110,10 +110,10 @@ function Index() {
         <div>
             <div id="text">
                 <h1>Stop the Machine</h1>
-                <h2>AI will take our jobs.</h2>
+                <h2>AI will take our jobs</h2>
                 <p> In ten years time, up to 50% of our jobs could vanish as AI replaces human labour across industries.</p>
 
-                <h2>AI will destabalize society.</h2>
+                <h2>AI will destabalize society</h2>
                 <p> Over the next 20 years, AI threatens to: </p>
                 <ul> 
                     <li>Seize control of news and media through mass disinformation</li>
@@ -122,7 +122,7 @@ function Index() {
                     <li>Disrupt governments and political stability worldwide</li>
                 </ul>
                 
-                <h2>AI could wipe out humanity. </h2>
+                <h2>AI could wipe out humanity </h2>
                 <p> AI is the greatest existential threat to humanity. While individual estimates vary, all serious experts agree that the risk is real - and rising. 
                     Some estimate a 10% chance of extinction over the next 100 years. Others warn it may be as high as 90%. 
                 </p>
