@@ -76,8 +76,6 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
         });
         const balanceTransaction = charge.balance_transaction;
 
-        let stripeFee; 
-
         try {
             // Get full details including amount and currency
             const amount = paymentIntent.amount_received;
@@ -92,14 +90,8 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
                     throw new Error(`No exchange rate from ${currency} to USD`);
                 }
                 amountInUSD = amount * rateToUSD;
-                if (balanceTransaction && balanceTransaction.fee != null) {
-                    stripeFee = balanceTransaction.fee * rateToUSD;
-                }
             } else {
                 amountInUSD = amount;
-                if (balanceTransaction && balanceTransaction.fee != null) {
-                    stripeFee = balanceTransaction.fee;
-                }
             }
             
             
@@ -142,6 +134,8 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
             `);
             update.run(amountInUSD);
 
+
+            const stripeFee = await getStripeFeeWithRetry(charge, currency);
             // update spending, need to insert into
             const spending = db.prepare(`
                 UPDATE spending
@@ -149,82 +143,6 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
                 WHERE account = 'stripe' `
             );
             spending.run(stripeFee);
-
-
-
-
-            async function getStripeFeeWithRetry(chargeId, currency) {
-                const maxAttempts = 5;
-                const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-            
-                for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-                    const charge = await stripe.charges.retrieve(chargeId, {
-                        expand: ['balance_transaction']
-                    });
-            
-                    const balanceTransaction = charge.balance_transaction;
-            
-                    if (balanceTransaction && typeof balanceTransaction.fee === 'number') {
-                        const rateToUSD = currency !== 'USD'
-                            ? (await stripe.exchangeRates.retrieve(currency.toLowerCase())).rates['usd']
-                            : 1;
-            
-                        if (!rateToUSD) throw new Error(`No exchange rate for ${currency}`);
-            
-                        return balanceTransaction.fee * rateToUSD;
-                    }
-            
-                    // Wait and retry
-                    await delay(1000 * attempt); // backoff: 1s, 2s, 3s...
-                }
-            
-                throw new Error('Could not retrieve stripe fee after retries');
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         } catch (error) {
             console.error('Error processing donation:', error.message);
@@ -287,7 +205,32 @@ app.post('/donate', async (req, res) => {
 });
 
 
+async function getStripeFeeWithRetry(chargeId, currency) {
+    const maxAttempts = 5;
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        const charge = await stripe.charges.retrieve(chargeId, {
+            expand: ['balance_transaction']
+        });
+
+        const balanceTransaction = charge.balance_transaction;
+
+        if (balanceTransaction && typeof balanceTransaction.fee === 'number') {
+            const rateToUSD = currency !== 'USD'
+                ? (await stripe.exchangeRates.retrieve(currency.toLowerCase())).rates['usd']
+                : 1;
+
+            if (!rateToUSD) throw new Error(`No exchange rate for ${currency}`);
+
+            return balanceTransaction.fee * rateToUSD;
+        }
+
+        await delay(1000 * attempt);
+    }
+
+    throw new Error('Could not retrieve stripe fee after retries');
+}
 
 
 
