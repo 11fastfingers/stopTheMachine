@@ -68,6 +68,12 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 
     if (event.type === 'payment_intent.succeeded') {
         const paymentIntent = event.data.object;
+        const chargeId = paymentIntent.charges.data[0].id;
+
+        const charge = await stripe.charges.retrieve(chargeId);
+        const balanceTransaction = await stripe.balanceTransactions.retrieve(charge.balance_transaction);
+
+        let stripeFee; 
 
         try {
             // Get full details including amount and currency
@@ -83,8 +89,10 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
                     throw new Error(`No exchange rate from ${currency} to USD`);
                 }
                 amountInUSD = amount * rateToUSD;
+                stripeFee = balanceTransaction.fee * rateToUSD;
             } else {
                 amountInUSD = amount;
+                stripeFee = balanceTransaction.fee;
             }
             
             
@@ -129,6 +137,16 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 
             // update spending, need to insert into
             
+            const spending = db.prepare(`
+                UPDATE spending
+                SET total = total + ?
+                WHERE account = 'stripe' `
+            );
+            spending.run(stripeFee);
+
+
+
+
 
         } catch (error) {
             console.error('Error processing donation:', error.message);

@@ -47,3 +47,6 @@ CREATE TABLE spending (
   account TEXT, /*  e.g cash    */ 
   total INTEGER  /* e.g 500 00 */ 
 ); 
+
+
+INSERT INTO spending (account, total) VALUES ('stripe', 0);
