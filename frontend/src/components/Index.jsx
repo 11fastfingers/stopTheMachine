@@ -237,8 +237,8 @@ function Index() {
                             */ }
 
 
-                                <p> Pending:  {totalPending !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</p>
-                                <p> Stripe: {totalPending !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</p>
+                                <p> Pending:  {totalPending !== null ? `$${totalPending.toFixed(2)}` : 'Loading...'}</p>
+                                <p> Stripe: {totalPending !== null ? `$${totalStripe.toFixed(2)}` : 'Loading...'}</p>
 
                                 <p> Spending Distribution</p>
                                 <p> Donation Leaderboard</p>
