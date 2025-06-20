@@ -229,19 +229,14 @@ function Index() {
 
 
                                 <p> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</p>
-                            {/*
-                            
-                                So what I want to do is fetch some stuff from the backend.
-                                I want to fetch the total donations, the 
-                            
-                            */ }
-                                 <p> Spending Distribution</p>
+                                <br></br>
+                                 <b> Spending</b>
 
                                 <p> Pending:  {totalPending !== null ? `$${totalPending.toFixed(2)}` : 'Loading...'}</p>
                                 <p> Stripe: {totalPending !== null ? `$${totalStripe.toFixed(2)}` : 'Loading...'}</p>
 
                                
-                                <p> Donation Leaderboard</p>
+                                <b> Leaderboard</b>
                                 <table>
                                     <tr>
                                         <td> #1</td>
