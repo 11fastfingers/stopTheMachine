@@ -240,10 +240,15 @@ app.get('/info', (req, res) => {
 
     const row3 = db.prepare("SELECT total FROM spending_totals WHERE account = 'stripe'").get();
 
+    const rows = db.prepare("SELECT name, total_donated FROM donor ORDER BY total_donated DESC LIMIT 50").all(); 
+        
+
+
     res.json({
         total_donations: row1?.total ?? 0, 
         pending: row2?.total ?? 0,
-        stripe: row3?.total ?? 0
+        stripe: row3?.total ?? 0,
+        top_donors: rows   
     });
 });
 

@@ -16,6 +16,10 @@ function Index() {
     const [totalDonations, setTotalDonations] = useState(null);
     const [totalPending, setTotalPending] = useState(null);
     const [totalStripe, setTotalStripe] = useState(null);
+    
+    const [topDonors, setTopDonors] = useState([]);
+
+
 
 
 
@@ -62,6 +66,7 @@ function Index() {
                 setTotalDonations((data.total_donations ?? 0) / 100);
                 setTotalPending((data.pending ?? 0) / 100);
                 setTotalStripe((data.stripe ?? 0) / 100);
+                setTopDonors(data.top_donors || []);
             } catch (err) {
                 console.error('Failed to fetch backend info:', err);
             }
@@ -218,26 +223,13 @@ function Index() {
                                
                                 <b> Leaderboard</b>
                                 <table>
-                                    <tr>
-                                        <td> #1</td>
-                                        <td> Bob</td>
-                                        <td> $5</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td> #2</td>
-                                        <td> Bob</td>
-                                        <td> $5</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td> #3</td>
-                                        <td> Bob</td>
-                                        <td> $5</td>
-                                    </tr>
-
-
-
+                                    {topDonors.map((donor, index) => (
+                                        <tr key={donor.name}>
+                                            <td>#{index + 1}</td>
+                                            <td>{donor.name}</td>
+                                            <td>${(donor.total_donated / 100).toFixed(2)}</td>
+                                        </tr>
+                                    ))}
                                 </table>
 
 
