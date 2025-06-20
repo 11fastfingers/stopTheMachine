@@ -235,7 +235,8 @@ function Index() {
                             */ }
 
 
-
+                                <p> Pending: </p>
+                                <p> Stripe: </p>
 
                                 <p> Spending Distribution</p>
                                 <p> Donation Leaderboard</p>

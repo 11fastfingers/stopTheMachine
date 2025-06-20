@@ -47,7 +47,21 @@ CREATE TABLE spending (
   account TEXT, /*  e.g cash    */ 
   amount INTEGER DEFAULT 0 /* e.g 500 00 */ 
 ); 
-INSERT INTO spending (account, total) VALUES ('stripe', 0);
+INSERT INTO spending (account, amount) VALUES ('stripe', 0);
+
+
+CREATE TABLE spending_totals (
+  account TEXT PRIMARY KEY, 
+  total INTEGER DEFAULT 0
+); 
+
+CREATE TRIGGER update_spending_totals
+AFTER INSERT ON spending
+BEGIN
+    INSERT INTO spending_totals (account, total)
+    VALUES (NEW.account, NEW.amount)
+    ON CONFLICT(account) DO UPDATE SET total = total + NEW.amount;
+END;
 
 
 

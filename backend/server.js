@@ -234,10 +234,16 @@ async function getStripeFeeWithRetry(chargeId, currency) {
 
 
 app.get('/info', (req, res) => {
-    const row = db.prepare('SELECT total FROM total_donations WHERE id = 1').get();
+    const row1 = db.prepare('SELECT total FROM total_donations WHERE id = 1').get();
+
+    const row2 = db.prepare('SELECT total FROM pending WHERE id = 1').get();
+
+    const row3 = db.prepare('SELECT total FROM spending WHERE account = "stripe"').get();
 
     res.json({
-        total_donations: row?.total ?? 0
+        total_donations: row1?.total ?? 0, 
+        pending: row2?.total ?? 0,
+        stripe: row3?.total ?? 0
     });
 });
 
