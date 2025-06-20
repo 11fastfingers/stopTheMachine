@@ -240,7 +240,7 @@ app.get('/info', (req, res) => {
 
     const row3 = db.prepare("SELECT total FROM spending_totals WHERE account = 'stripe'").get();
 
-    const rows = db.prepare("SELECT name, total_donated FROM donor ORDER BY total_donated DESC LIMIT 50").all(); 
+    const rows = db.prepare("SELECT name, total_donated FROM donor ORDER BY total_donated DESC LIMIT 50").all().map(row => ({ ...row })); // This spreads the row into a plain object; 
         
 
 
