@@ -50,9 +50,11 @@ CREATE TABLE spending (
 INSERT INTO spending (account, amount) VALUES ('stripe', 0);
 
 
+DROP TABLE spending_totals;
 CREATE TABLE spending_totals (
   account TEXT PRIMARY KEY, 
-  total INTEGER DEFAULT 0
+  total INTEGER DEFAULT 0, 
+  FOREIGN KEY (account) REFERENCES spending(account) ON DELETE CASCADE
 ); 
 
 CREATE TRIGGER update_spending_totals
