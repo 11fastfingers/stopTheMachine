@@ -73,6 +73,10 @@ ul li {
     margin: 0; 
 }
 
+td {
+    padding: 1rem; 
+}
+
 /* Phone */  
 @media (max-width: 600px) {
     #text {

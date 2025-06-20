@@ -242,6 +242,30 @@ function Index() {
 
                                
                                 <p> Donation Leaderboard</p>
+                                <table>
+                                    <tr>
+                                        <td> #1</td>
+                                        <td> Bob</td>
+                                        <td> $5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> #2</td>
+                                        <td> Bob</td>
+                                        <td> $5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> #3</td>
+                                        <td> Bob</td>
+                                        <td> $5</td>
+                                    </tr>
+
+
+
+                                </table>
+
+
                                
                             </div>
                            
