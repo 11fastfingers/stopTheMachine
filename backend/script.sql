@@ -99,3 +99,17 @@ BEGIN
     SET total = (SELECT total FROM total_donations WHERE id = 1)
               - (SELECT total FROM total_spending WHERE id = 1);
 END;
+
+
+
+UPDATE total_donations SET total = 1818 WHERE id = 1; 
+
+UPDATE pending SET total = 1142 WHERE id = 1;
+
+
+
+UPDATE spending_totals SET total = 745 WHERE account = 'stripe'; 
+
+INSERT INTO donor (name, total_donated) VALUES ('James Spencer', 1818);
+
+UPDATE total_spending SET total = 776 WHERE id = 1;

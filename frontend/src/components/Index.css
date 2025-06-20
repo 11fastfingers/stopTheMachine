@@ -80,6 +80,11 @@ td {
     margin-left: 0; 
 }
 
+a {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
 /* Phone */  
 @media (max-width: 600px) {
     #text {
