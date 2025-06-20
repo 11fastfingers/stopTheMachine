@@ -60,8 +60,8 @@ function Index() {
     
                 // Convert cents to dollars and store as number
                 setTotalDonations((data.total_donations ?? 0) / 100);
-                setTotalPending((data.total_pending ?? 0) / 100);
-                setTotalStripe((data.total_stripe ?? 0) / 100);
+                setTotalPending((data.pending ?? 0) / 100);
+                setTotalStripe((data.stripe ?? 0) / 100);
             } catch (err) {
                 console.error('Failed to fetch backend info:', err);
             }
