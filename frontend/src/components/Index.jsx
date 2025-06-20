@@ -14,7 +14,7 @@ function Index() {
 
 
     const [totalDonations, setTotalDonations] = useState(null);
-
+    const [totalPending, setTotalPending] = useState(null);
 
 
 
@@ -60,6 +60,7 @@ function Index() {
     
                 // Convert cents to dollars and store as number
                 setTotalDonations((data.total_donations ?? 0) / 100);
+                setTotalPending((data.total_pending ?? 0) / 100);
             } catch (err) {
                 console.error('Failed to fetch backend info:', err);
             }
@@ -235,7 +236,7 @@ function Index() {
                             */ }
 
 
-                                <p> Pending: </p>
+                                <p> Pending:  {totalPending !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</p>
                                 <p> Stripe: </p>
 
                                 <p> Spending Distribution</p>
