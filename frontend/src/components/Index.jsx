@@ -206,6 +206,7 @@ function Index() {
                     <li>
                         {renderDropdown("Donate", "Donate", (
                             <div>
+                                <br></br>
                                 <b> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</b>
                                 <br></br>
                                 <br></br>
