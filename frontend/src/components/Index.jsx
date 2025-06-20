@@ -208,6 +208,7 @@ function Index() {
                             <div>
                                 <b> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</b>
                                 <br></br>
+                                <br></br>
                                  <b> Spending</b>
 
                                 <p> Pending:  {totalPending !== null ? `$${totalPending.toFixed(2)}` : 'Loading...'}</p>
