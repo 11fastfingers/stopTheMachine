@@ -238,7 +238,7 @@ app.get('/info', (req, res) => {
 
     const row2 = db.prepare('SELECT total FROM pending WHERE id = 1').get();
 
-    const row3 = db.prepare('SELECT total FROM spending_totals WHERE account = `stripe').get();
+    const row3 = db.prepare('SELECT total FROM spending_totals WHERE account = "stripe"').get();
 
     res.json({
         total_donations: row1?.total ?? 0, 
