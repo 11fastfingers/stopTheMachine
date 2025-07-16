@@ -148,7 +148,7 @@ function Index() {
 
                         <p>Total Views: </p>
 
-                        <p>Top Donors</p>
+                        <p>Top Sharers: </p>
 
 
 
@@ -186,7 +186,7 @@ function Index() {
                         <br></br>
                         <br></br>
 
-                        Leaderboard
+                        Top Donors: 
                         <table>
                             {topDonors.map((donor, index) => (
                                 <tr key={donor.name}>
