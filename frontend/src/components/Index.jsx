@@ -148,7 +148,7 @@ function Index() {
 
                         <p>Total Views: </p>
 
-                        <p>Leaderboard </p>
+                        <p>Top Donors</p>
 
 
 
