@@ -141,143 +141,21 @@ function Index() {
                 </p>
 
                 <h2> What can we do about it?</h2>
-                <ol id="no-margin">
-                    <li>
-                        {renderDropdown("Spread the Word", "Spread the Word", (
-                            <div>
-                                <ul>
-                                    <li>Tell your friends and family</li>
-                                    <li>Post on Social media</li>
-                                    <li>Mention AI risk at school or work</li>
-                                    <li>Contact your Government</li>
-                                </ul>
+                    <div>
+                        <b> Spread the word</b>
+                    </div>
+                    <br></br>
+                    <div>
+                        <b>Donate</b>
 
-                            <span> links:  </span>
-                                <ul> 
-                                    <li>Stop The Machine: <a href="https://stopthemachine.org">https://stopthemachine.org</a></li>
-                                    <li>PauseAI <a href="https://pauseai.info">https://pauseai.info</a></li>
-                                    <li>StopAI <a href="https://stopai.info">https://stopai.info</a></li>
-                                    <li>Statement on AI risk of Extinction: <a href="https://en.wikipedia.org/wiki/Statement_on_AI_risk_of_extinction">https://en.wikipedia.org/wiki/Statement_on_AI_risk_of_extinction</a></li>
-                                </ul>
-
-                            </div>
-                            
-                            
-                        ))}
-                    </li>
-                    <li>
-                        {renderDropdown("Avoid AI Products", "Avoid AI Products", (
-                            <div>
-                                <br></br>
-                                <b>Don't Make AI smarter</b>
-                                <p>    
-                                    By using AI products, AI models get smarter and smarter. 
-                                    So avoid using AI products whenever possible.
-                                </p>
-                                <p>
-                                    If you must use AI, avoid giving feedback. Human feedback is essential to the development of large language models. 
-                                    Even better, give misinformation. E.g if ChatGPT asks you which of two options you prefer, 
-                                    choose the option you like the least.
-                                </p>
-
-                                <b>Vote with your Dollars</b> 
-                                <p>
-                                   Do not purchase any AI products. You will be directly funding AI development. 
-                                   If you must use AI, always use the free version. If you are a decision maker at a company, think twice
-                                   before integrating AI. The short term savings and productivity gains are tempting. But long term you will be funding your own replacement. 
-                                </p>
-                                <p>
-                                   Do not invest in AI. Startup AI companies are especially dangerous to invest in. They can move fast, can innovate rapidly, and are reckless in their development of artificial intelligence.
-                                </p>
-                                <p>
-                                   Even if you are wealthy, investing in AI is a bad idea. AI is a direct threat to all of your non-AI investments. 
-                                   More importantly, you cannot own something vastly more intelligent than you are. Once artificial general intelligence is created, 
-                                   you will lose control. Your wealth will be destroyed. You could die. 
-                                </p>
-                            </div>
-                        ))}
-                    </li>
-                    <li>
-                        {renderDropdown("Join the Movement", "Join the Movement", (
-                            <div>
-                                <br></br>
-                                <div>Reddit: <a href="https://www.reddit.com/r/stopthemachine/">https://www.reddit.com/r/stopthemachine/</a></div>
-                                <div>Discord: <a href="https://discord.gg/jutT6WB9">https://discord.gg/jutT6WB9</a></div>
-                            
-                            </div>
-                            
-                        ))}
-                    </li>
-                    <li>
-                        {renderDropdown("Donate", "Donate", (
-                            <div>
-                                <br></br>
-                                <b> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</b>
-                                <br></br>
-                                <br></br>
-                                 <b> Spending</b>
-
-                                <p> Pending:  {totalPending !== null ? `$${totalPending.toFixed(2)}` : 'Loading...'}</p>
-                                <p> Stripe: {totalPending !== null ? `$${totalStripe.toFixed(2)}` : 'Loading...'}</p>
-
-                               
-                                <b> Leaderboard</b>
-                                <table>
-                                    {topDonors.map((donor, index) => (
-                                        <tr key={donor.name}>
-                                            <td>#{index + 1}</td>
-                                            <td>{donor.name}</td>
-                                            <td>${(donor.total_donated / 100).toFixed(2)}</td>
-                                        </tr>
-                                    ))}
-                                </table>
+                        <p>100% of donations go directly to awareness ads. For every $1 donated, 200 people are warned. 
+                        </p>
 
 
-                                <br></br>
-                                <form id="donation-form" onSubmit={handleDonationSubmit}>
-
-                                    <label>Amount:</label>
-                                    <input type="number" name="donationAmount" required min="0.50" step="0.01"/>
-                                    <br></br>
-                                    <label>Currency:</label>
-                                    <select name="currency" defaultValue="USD" required>
-                                        <option value="USD">USD - United States Dollar</option>
-                                    </select>
-                                    <br></br>
-
-                                    <label>Name: (optional)</label>
-                                    <input type="text" name="name"/>
-                                    <br></br><br></br>
-                                    <div><button id="donate-button">Donate</button></div>
-                                    
-                                    <br></br>
-
-                                </form>
-
-                               
-                            </div>
-                           
-                        ))}
-                    </li>
-                    <li>
-                        {renderDropdown("Volunteer", "Volunteer", (
-                            <div>
-                                <br></br>
-                                <ul>Major Contributors:
-                                    
-                                </ul>
-
-                                <br />
-                                <p> All code is open source and can be publically viewed: <a href="https://github.com/11fastfingers/stopTheMachine">https://github.com/11fastfingers/stopTheMachine</a> </p>
-
-
-                            </div>
-                            
-                        ))}
-                        <br></br>
-                    </li>
+                        <b> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</b>
+                    </div>
                     
-                </ol>
+            
                 
 
             </div>
