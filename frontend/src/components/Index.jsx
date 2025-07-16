@@ -142,18 +142,66 @@ function Index() {
 
                 <h2> What can we do about it?</h2>
                     <div>
-                        <b> Spread the word</b>
+                        <h3> Spread the word</h3>
+
+                        <p>Share the link stopthemachine.org. </p>
+
+                        <p>Total Views: </p>
+
+                        <p>Leaderboard </p>
+
+
+
+
                     </div>
                     <br></br>
                     <div>
-                        <b>Donate</b>
+                        <h3>Donate</h3>
 
-                        <p>100% of donations go directly to awareness ads. For every $1 donated, 200 people are warned. 
-                        </p>
+                        <div><b>$1 Warns 200 People</b></div>
+                        <div>100% of donations fund digital ads warning people about AI risks. </div>
+                        <br></br>
 
 
-                        <b> Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}</b>
+
+                        <form id="donation-form" onSubmit={handleDonationSubmit}>
+                            <label>Amount:</label>
+                            <input type="number" name="donationAmount" required min="0.50" step="0.01"/>
+                            <br></br>
+
+                            <label>Currency:</label>
+                            <select name="currency" defaultValue="USD" required>
+                                <option value="USD">USD - United States Dollar</option>
+                            </select>
+                            <br></br>
+
+                            <label>Name: (optional)</label>
+                            <input type="text" name="name"/>
+                            <br></br><br></br>
+                            <div><button id ="donate-button">Donate</button></div>
+                            <br></br>
+                        </form>
+
+                        Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}
+                        <br></br>
+                        <br></br>
+
+                        Leaderboard
+                        <table>
+                            {topDonors.map((donor, index) => (
+                                <tr key={donor.name}>
+                                    <td>#{index + 1}</td>
+                                    <td>{donor.name}</td>
+                                    <td>${(donor.total_donated / 100).toFixed(2)}</td>
+                                </tr>
+                            ))}
+                        </table>
+
                     </div>
+
+
+
+                    
                     
             
                 
