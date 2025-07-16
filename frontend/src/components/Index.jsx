@@ -144,13 +144,23 @@ function Index() {
                     <div>
                         <h3> Spread the word</h3>
 
-                        <p>Share the link stopthemachine.org. </p>
+                        <div><b>People need to know what's coming — before it's too late.</b></div>
+                        <p>
+                        Share your own custom link to help spread the warning.  
+                        For example, if your name is John Smith, you can share   
+                        <code> stopthemachine.org/JohnSmith </code>  
+                        Each time a new person visits your link, "John Smith" will rise on the Top Sharers leaderboard.
+                        </p>
 
-                        <p>Total Views: </p>
+                        <label>Name: </label>
+                        <input type="text" name="name" placeholder="type in a name or phrase to get your sharable link"/>
+                        Link: <a>stopthemachine.org</a>
+
+                        <p>Total Site Visits: 0</p>
 
                         <p>Top Sharers: </p>
 
-
+                        
 
 
                     </div>
