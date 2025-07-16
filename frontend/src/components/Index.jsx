@@ -118,7 +118,7 @@ function Index() {
             <div id="text">
                 <h1>Stop the Machine</h1>
                 <h2>AI will take our jobs</h2>
-                <p> In ten years time, up to 50% of our jobs could vanish as AI replaces human labour across industries.</p>
+                <p> In 10 years time, up to 50% of our jobs could vanish as AI replaces human labour across industries.</p>
 
                 <h2>AI will destabalize society</h2>
                 <p> Over the next 20 years, AI threatens to: </p>
