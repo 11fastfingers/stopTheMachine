@@ -149,7 +149,7 @@ function Index() {
                             <p>
                             Share your own custom link to help spread the warning.  
                             For example, if your name is John Smith, you can share   
-                            <code> stopthemachine.org/JohnSmith </code>  
+                            <code> stopthemachine.org/john-smith </code>  
                             Each time a new person visits your link, "John Smith" will rise on the Top Sharers leaderboard.
                             </p>
 
