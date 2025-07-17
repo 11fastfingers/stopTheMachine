@@ -209,9 +209,14 @@ function Index() {
                             </table>
 
                         </div>
+                        <div id="about-container">
+                            <a id="about"> about</a>
+                        </div>
+                        
                 </div>
+
             </div>
-            <div id="about">
+            <div id="about-page">
 
             </div>
         </div>

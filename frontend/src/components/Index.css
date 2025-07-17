@@ -85,6 +85,24 @@ a {
     word-break: break-word;
 }
 
+#about {
+    font-size: 0.75rem; 
+    color: rgb(220, 220, 220); 
+    
+}
+
+#about:hover {
+    cursor: pointer; 
+}
+
+#about-container {
+    width: 100rem; 
+    text-align: center;
+}
+
+
+
+
 /* Phone */  
 @media (max-width: 600px) {
     #text {
