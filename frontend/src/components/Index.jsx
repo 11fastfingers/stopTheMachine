@@ -157,7 +157,7 @@ function Index() {
                             <input type="text" name="name" placeholder="type in a name or phrase to get your sharable link"/>
                             <span> Link: <a>stopthemachine.org</a> </span>
 
-                            <p>Total Unique Site Visitors: 0</p>
+                            <p>Total Unique Visitors: 0</p>
 
                             <p>Top Sharers: </p>
 
