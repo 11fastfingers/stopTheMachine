@@ -336,7 +336,7 @@ function Index() {
                         <li><b>Efficient: </b>doesn't drink, eat, or sleep, can work continuously </li>
                         <li><b>Scalable: </b> not limited to a single brain. It could have thousands or millions of "brains" working tother all at once. </li>
                         <li><b>Alien: </b> Does not have human instincts, emotions, or morals. </li>
-                        <li><b>Consicousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks, like a duck, and walks like a duck, then it's a duck. </li>
+                        <li><b>Consicousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks like a duck, and walks like a duck, then it's a duck. </li>
                         <li><b>Not a tool:</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than that - it can act independently of humans. </li>
                         <li><b>Incomprehensibile: </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like. </li>
                         <li><b> Self-replicating: </b> Once created, it can spread like a virus. With a fully digital existence, it will almost impossible to destroy or contain it. </li>
@@ -390,7 +390,7 @@ function Index() {
 
                     <p>
                         On a final note, all StopTheMachine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. StopTheMachine is not involved in any activism of any kind, nor is any particular solution endorsed. 
-                        If there is action taken against AI, regularatory or otherwise, it is completely unrelated to StopTheMachine. 
+                        If there is action taken against AI, regulatory or otherwise, it is completely unrelated to StopTheMachine. 
                     </p>
                    
 
