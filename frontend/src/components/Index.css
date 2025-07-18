@@ -96,7 +96,7 @@ a {
 }
 
 #about-container {
-    width: 100rem; 
+    width: 100%; 
     text-align: center;
 }
 

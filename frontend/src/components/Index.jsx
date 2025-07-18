@@ -400,8 +400,7 @@ function Index() {
                         On a final note, all StopTheMachine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. StopTheMachine is not involved in any activism of any kind, nor is any particular solution endorsed. 
                         If there is action taken against AI, regulatory or otherwise, it is completely unrelated to StopTheMachine. 
                     </p>
-                   
-
+                
                     <div id="about-container">
                         <a id="home" onClick={homeAction} > home</a>
                     </div>
