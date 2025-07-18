@@ -121,4 +121,8 @@ a {
     h2 {
         font-size: 1.5rem; 
     }
+
+    #james-image {
+        width: 35vw; 
+    }
 }
