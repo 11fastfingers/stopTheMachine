@@ -255,23 +255,23 @@ function Index() {
                     <h2> Legal Status</h2> 
                         <p>
                         Another thing to mention: StopTheMachine is a non-profit initiative of an Australian sole-trader registered under the name "Beta Products". This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
-                        - could send me to jail. My personal assets could be seized, ect ect.  
+                        - could send me to jail. My personal assets could be seized, I could be sued, ect.  
                         </p>
                         <p>
                         I'm not registered as a charity. Unfortunately, that means <b>donations aren't tax deductible.</b> If I was a charity, that would mean an expensive board of directors, less control, and less speed. This way is simpler and cheaper.
-                        In regards to the relationship between Beta and StopTheMachine, basically it works like this. If I need to I can transfer money from Beta to StopTheMachine. However, money cannot go the other way around. Another thing, all parts of StopTheMachine are <b>in the public domain.</b> They can be freely used, shared, copied, whatever. The code is also open source. 
-                        However, this does not apply to separate for-profit parts of Beta, which are proprietary. 
+                        In regards to the relationship between Beta and StopTheMachine, basically it works like this. If I need to I can transfer money from Beta to StopTheMachine. However, money cannot go the other way around. Another thing, all parts of StopTheMachine are <b>in the public domain.</b> They can be freely used, shared, copied, whatever. The code is also <u>open source.</u>  
+                         However, this does not apply to separate for-profit parts of Beta, which are proprietary. 
                         </p>
 
                     <h2> Terms of Use </h2>
 
                     <p> 
-                        Ok, right, so the main thing to be aware of is that donations are non-refundable. Once you donate, I take that money and buy ads with it. If you ask for it back, I can't give it back - because I don't have it! Reddit has it, or Stripe has it. And please don't suggest that I take someone else's donation and give that to you
-                        - I can't do that. So <b>once you donate, it's gone. </b>
+                        Ok, right, so the main thing to be aware of is that donations are non-refundable. Once you donate, I take that money and buy ads with it. If you ask for it back, I can't give it back - because I don't have it! And I can't take someone else's donation and give that to you
+                        because it breaks the 100% go to ads rule. So <b>once you donate, it's gone. </b>
 
                     </p>
                     <p> 
-                        I guess just one more thing to be aware of is that all of this is done by just one person. So there will be problems - many of them. I'll do my best to fix them, but again, I'm just one person. So please be patient with me. 
+                        I guess just one more thing to be aware of is that all of this is done by just one person. So there will be problems - many of them. I'll do my best to fix them, but again, I'm just one person. So <b>please be patient with me. </b>
                     </p>
 
                     <h2> Privacy Policy</h2>
@@ -285,41 +285,64 @@ function Index() {
                     </p>
 
 
-                    <h2> Our Partners</h2>
-
-                    <h3> Reddit</h3>
-
-                    <h3> Stripe</h3>
-
-                    <h3> Godaddy</h3>
-
-                    <h3> Vercel</h3>
-
-                    <h3> Render </h3>
-
-
                     <h2> Influences</h2>
 
                     <h3> Paul Graham</h3>
 
+                    <p> His essays - a strong influence on me personally. He was also key to the development of both Reddit and Stripe, which are highly valued partners. To put it simply, StopTheMachine <b>wouldn't exist without him. </b></p>
+
                     <h3> Geoffrey Hinton </h3>
 
-                    <h3> Yoshua Bendigo</h3>
+                    <p> Introduced me to idea that artificial superintelligence presents a legitimate existential threat.</p>
+
+                    <h3> Yoshua Bengio</h3> 
+                    
+                    <p> Shaped my views around the immense challenge of alignment and global coordination.</p>
+
+                    <h2> Partners</h2>
+
+                    <h3> Reddit</h3>
+                    
+                    <p> Provides <b>advertising </b> services.  </p>
+
+                    <h3> Stripe</h3>
+
+                    <p> Provides <b>payment processing </b> for donations. </p>
+
+                    <h3> GoDaddy</h3>
+                    <p>
+                        Provides the <b>domain</b> stopthemachine.org
+                    </p>
+
+                    <h3> Vercel</h3>
+                    <p> 
+                        Hosts the <b> website </b>
+                    </p>
+
+                    <h3> Render </h3>
+                    <p>
+                        Hosts the backend <b>server </b>
+                    </p>
+
+
+ 
  
 
 
                     <h2> What Artificial Superintelligence will look like </h2>
 
                     <p> 
-                        -  <b>Exponential Improvement </b> the rate of improvement: Exponential. Right now we have very weak AI, but it is improving so rapidly that it is expected to surpass human intelligence within 5 to 15 years. 
-                        -  <b>Rapid Self Learning: </b> unlike humans, AI is streamlined for rapid self improvement. From the moment AGI is created, this speed of self improvement will result in artificial superintelligence potentially within days or weeks. 
+                        -  <b>Exponential Improvement </b> the rate of improvement: Exponential. Right now we have very weak AI, but it is improving so rapidly that it is expected to reach superintelligence within 5 to 15 years. 
+                        -  <b>Rapid Self Learning: </b> AI is streamlined for rapid self improvement. From the moment AGI is created, this speed of self improvement will result in artificial superintelligence potentially within days or weeks. 
                         -  <b>Efficient </b>doesn't drink, eat, or sleep, can work continuously
                         -  <b>Scalable </b> not limited to a single brain. It could have thousands or millions of "brains" working tother all at once. 
-                        -  <b> Alien </b> Does not have human instincts, emotions, or morals. 
+                        -  <b>Alien </b> Does not have human instincts, emotions, or morals. 
                         -  <b>Consicousness is irrelevant.</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks, like a duck, and walks like a duck, then it's a duck.
+                        -  <b>Not a tool</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than act - it can and will act independently of humans. 
                         -  <b>Incomprehensibile </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like.
-                        -  <b> Self-replicating </b> Once created, it is literally lines of code that can be replicated everywhere
+                        -  <b> Self-replicating </b> Once created, it can spread like a virus. With a fully digital existence, it will almost impossible to destroy or contain it.
                         -  <b> Uncontrollable </b> No matter what controls we put in place, artificial superintelligence could find a way to break free if it wants to.  
+                        - 
                     </p> 
 
 
@@ -327,28 +350,32 @@ function Index() {
                         
                         <p>
                         Ok, right so if you imagine a chain, a chain is only as strong as its weakest link. If a single link breaks, then the whole chain falls appart. 
-                        
+                        </p>
+
                         <b>1. The Alignment Chain. </b>
 
-                        Artificial superintelligence will make humans ants. To try to control it is like an ant trying to control a human. That seems a little scary doesn't it? Hence, Alingment comes in. 
+                        <p>
+                        Artificial superintelligence will make humans ants. To try to control it is like an ant trying to control a human. That seems a little scary doesn't it? Hence, Alignment comes in. 
     
                         But alignment is a chain, with a single breakage leading to human extinction. Once AGI is created, Pandara's Box is opened. The direction of possibility isn't on us figuring out a clever way to align AI. It's on Artificial superintelligence
                         finding a way to break free of our control. Thus for alignment to work, we have to get very very lucky. 
-
+                        </p>
                         <b> 2. The Social Chain </b>
 
+                        <p>
                         Ok, let's say we succeed. We've done it, we've figured it out. We don't go extinct! That's pretty neat isn't it? I don't know about you but I like not going extinct.
                         Anyway, right, so back to the topic. Now because artificial superintelligence is just so powerful, it means that society will be transformed into either a utopia or a dystopia.
-
+                        
                         Now for us to create a utopia, a social chain is required. AI needs to be controlled equally by all humans. A single break in this long egalitarian chain, where one person has more control over AI than another, eventually leads to dystopia.
-                        Let me explain. Humans, after artificial superintelligence, will no longer have any power. So if an individual, small group, or even a single country controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a dystopia which we could never escape. 
-
-
-                        Ok, so this is the problem. For us to not go extinct we have to get extremely lucky. And then for us to create a utopia, we have to get extremely lucky again. If we create artificial superintelligence, it's either extinction or dystopia. 
+                        Let me explain. Humans, after artificial superintelligence, will no longer have any power. So if an individual, a small group, or even a single country controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a dystopia which we could never escape. 
+                        </p>
+                        
+                        <p>
+                        Ok, so this is the problem. For us to not go extinct we have to get extremely lucky with aligment. And then for us to create a utopia, we have to get extremely lucky again. If we create artificial superintelligence, <b>it's either extinction or dystopia. </b>
 
                         Now imagine: We stop the machine. We stop the creation of artificial superintelligence. No extinction risk. No dystopia risk. The future is so bright. We just need to stop this one little thing. <b> We need to Stop The Machine. </b>
-
-
+                        
+                        
                     
 
                         </p>
@@ -360,10 +387,11 @@ function Index() {
 
                     <p>
                         Ok, so one thing I said was that every $1 donated warns 200 people. That was an approximation. $1 gets you from 100 to 600 impressions on Reddit. And in some cases people might be shown the same ad multiple times. 
+                    </p>
 
-                        Ok, so one final note. All Stop The Machine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. Stop The Machine is not involved in any activism of any kind, nor is any particular solution endorsed. 
-                        If there is action taken against AI, it is independent and unrelated to Stop The Machine.
-
+                    <p>
+                        On a final note, all StopTheMachine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. StopTheMachine is not involved in any activism of any kind, nor is any particular solution endorsed. 
+                        If there is action taken against AI, regularatory or otherwise, it is completely unrelated to StopTheMachine. 
                     </p>
                    
 
