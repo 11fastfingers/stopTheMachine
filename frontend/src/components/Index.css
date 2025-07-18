@@ -1,6 +1,6 @@
 
 /* Laptop */ 
-#text {
+.text {
     width: 35vw; 
     margin-left: 7vw; 
     margin-right: 12.5vw;  
@@ -8,7 +8,7 @@
     font-size: 1.25rem; 
 }
 
-#text .dropdown {
+.text .dropdown {
     border-radius: 5px;
     margin: 10px 0;
     overflow: hidden;
@@ -16,7 +16,7 @@
     width: fit-content; 
 }
   
-#text .dropdown-header {
+.text .dropdown-header {
     
     cursor: pointer;
     padding-right: 1rem;
@@ -28,17 +28,17 @@
 
 }
   
-#text .dropdown-content {
+.text .dropdown-content {
     display: none;
 }
   
-#text .dropdown.open .dropdown-content {
+.text .dropdown.open .dropdown-content {
     display: block;
 }
 
   
   
-#text .arrow {
+.text .arrow {
     height: 1.25rem;
     width: 1.25rem;
     margin-left: 0.5rem;
@@ -105,7 +105,7 @@ a {
 
 /* Phone */  
 @media (max-width: 600px) {
-    #text {
+    .text {
         width: 80vw; 
         margin-left: 10vw; 
         margin-right: 10vw;  
