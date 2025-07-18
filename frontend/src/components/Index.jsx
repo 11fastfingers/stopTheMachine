@@ -355,6 +355,16 @@ function Index() {
 
                     <h2> </h2> 
 
+
+                    <h2> Legal Discalimer</h2>
+
+                    <p>
+                        Ok, so one thing I said was that every $1 donated warns 200 people. That was an approximation. $1 gets you from 100 to 600 impressions on Reddit. And in some cases people might be shown the same ad multiple times. 
+
+                        Ok, so one final note. All Stop The Machine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. Stop The Machine is not involved in any activism of any kind, nor is any particular solution endorsed. 
+                        If there is action taken against AI, it is independent and unrelated to Stop The Machine.
+
+                    </p>
                    
 
                     
