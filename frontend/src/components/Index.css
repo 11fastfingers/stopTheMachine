@@ -85,13 +85,13 @@ a {
     word-break: break-word;
 }
 
-#about {
+#about, #home {
     font-size: 0.75rem; 
     color: rgb(220, 220, 220); 
     
 }
 
-#about:hover {
+#about:hover, #home:hover {
     cursor: pointer; 
 }
 

@@ -61,6 +61,14 @@ function Index() {
         window.scrollTo({ top: 0});
     }
 
+    const homeAction = () => {
+        const landing = document.getElementById('landing-page');
+        const about = document.getElementById('about-page');
+      
+        landing.style.display = 'block';
+        about.style.display = 'none';
+        window.scrollTo({ top: 0});
+    }
 
     
 
@@ -370,7 +378,7 @@ function Index() {
                         </p>
                         
                         <p>
-                        Ok, so this is the problem. For us to not go extinct we have to get extremely lucky with aligment. And then for us to create a utopia, we have to get extremely lucky again. If we create artificial superintelligence, <b>it's either extinction or dystopia. </b>
+                        Ok, so this is the problem. For us to not go extinct we have to get extremely lucky with aligment. And then for us to create a utopia, we have to get extremely lucky again. We can't get that lucky. If we create artificial superintelligence, the consequence is <b>either extinction or dystopia. </b>
 
                         Now imagine: We stop the machine. We stop the creation of artificial superintelligence. No extinction risk. No dystopia risk. Everyone keeps their jobs. The future is so bright. We just need to stop this one little thing. <b> We need to Stop The Machine. </b>
                         
@@ -394,13 +402,9 @@ function Index() {
                     </p>
                    
 
-                    
-
-
-
-
-
-                    <h2> </h2>
+                    <div id="about-container">
+                        <a id="home" onClick={homeAction} > home</a>
+                    </div>
 
 
                 </div>
