@@ -332,7 +332,7 @@ function Index() {
 
                         Artificial superintelligence will make humans ants. To try to control it is like an ant trying to control a human. That seems a little scary doesn't it? Hence, Alingment comes in. 
     
-                        But alignment is a chain, with a single breakage leading to human extinction. Once AGI is created, it's Pandara's Box. The direction of possibility isn't on us figuring out a clever way to align AI. It's on Artificial superintelligence
+                        But alignment is a chain, with a single breakage leading to human extinction. Once AGI is created, Pandara's Box is opened. The direction of possibility isn't on us figuring out a clever way to align AI. It's on Artificial superintelligence
                         finding a way to break free of our control. Thus for alignment to work, we have to get very very lucky. 
 
                         <b> 2. The Social Chain </b>
@@ -340,11 +340,13 @@ function Index() {
                         Ok, let's say we succeed. We've done it, we've figured it out. We don't go extinct! That's pretty neat isn't it? I don't know about you but I like not going extinct.
                         Anyway, right, so back to the topic. Now because artificial superintelligence is just so powerful, it means that society will be transformed into either a utopia or a dystopia.
 
-                        Now for us to create a utopia, a social chain is required. AI needs to be controlled equally by all humans. A single break and we're in a dystopia. Humans, in the wake of artificial superintelligence, will no longer have any power. So if a small group controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a dystopia - which we could never escape. 
+                        Now for us to create a utopia, a social chain is required. AI needs to be controlled equally by all humans. A single break in this long egalitarian chain, where one person has more control over AI than another, eventually leads to dystopia.
+                        Let me explain. Humans, after artificial superintelligence, will no longer have any power. So if an individual, small group, or even a single country controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a dystopia which we could never escape. 
+
 
                         Ok, so this is the problem. For us to not go extinct we have to get extremely lucky. And then for us to create a utopia, we have to get extremely lucky again. If we create artificial superintelligence, it's either extinction or dystopia. 
 
-                        Now imagine: We stop the machine. We stop the creation of artificial superintelligence. No extinction risk. No dystopia risk. The future is so bright, if we just stop this little thing. Stop The Machine. 
+                        Now imagine: We stop the machine. We stop the creation of artificial superintelligence. No extinction risk. No dystopia risk. The future is so bright. We just need to stop this one little thing. <b> We need to Stop The Machine. </b>
 
 
                     
@@ -352,6 +354,8 @@ function Index() {
                         </p>
 
                     <h2> </h2> 
+
+                   
 
                     
 
