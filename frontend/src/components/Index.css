@@ -101,7 +101,9 @@ a {
 }
 
 
-
+#james-image {
+    width: 25vw; 
+}
 
 /* Phone */  
 @media (max-width: 600px) {
