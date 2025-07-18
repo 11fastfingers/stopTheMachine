@@ -259,7 +259,7 @@ function Index() {
                         <p>
                         I'm not registered as a charity. Unfortunately, that means <b>donations aren't tax deductible.</b> If I was a charity, that would mean an expensive board of directors, less control, and less speed. This way is simpler and cheaper.
                         In regards to the relationship between Beta and StopTheMachine, basically it works like this. If I need to I can transfer money from Beta to StopTheMachine. However, money cannot go the other way around. Another thing, all parts of StopTheMachine are <b>in the public domain.</b> They can be freely used, shared, copied, whatever. The code is also <u>open source.</u>  
-                         However, this does not apply to separate for-profit parts of Beta, which are proprietary. 
+                          However, this does not apply to separate for-profit parts of Beta, which are proprietary. 
                         </p>
 
                     <h2> Terms of Use </h2>
@@ -330,19 +330,19 @@ function Index() {
 
                     <h2> What Artificial Superintelligence will look like </h2>
 
-                    <p> 
-                        -  <b>Exponential Improvement </b> the rate of improvement: Exponential. Right now we have very weak AI, but it is improving so rapidly that it is expected to reach superintelligence within 5 to 15 years. 
-                        -  <b>Rapid Self Learning: </b> AI is streamlined for rapid self improvement. From the moment AGI is created, this speed of self improvement will result in artificial superintelligence potentially within days or weeks. 
-                        -  <b>Efficient </b>doesn't drink, eat, or sleep, can work continuously
-                        -  <b>Scalable </b> not limited to a single brain. It could have thousands or millions of "brains" working tother all at once. 
-                        -  <b>Alien </b> Does not have human instincts, emotions, or morals. 
-                        -  <b>Consicousness is irrelevant.</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks, like a duck, and walks like a duck, then it's a duck.
-                        -  <b>Not a tool</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than act - it can and will act independently of humans. 
-                        -  <b>Incomprehensibile </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like.
-                        -  <b> Self-replicating </b> Once created, it can spread like a virus. With a fully digital existence, it will almost impossible to destroy or contain it.
-                        -  <b> Uncontrollable </b> No matter what controls we put in place, artificial superintelligence could find a way to break free if it wants to.  
-                        - 
-                    </p> 
+                    <ul> 
+                        <li><b>Exponential Improvement: </b> the rate of improvement: Exponential. Right now we have very weak AI, but it is improving so rapidly that it is expected to reach superintelligence within 5 to 15 years. </li>
+                        <li><b>Rapid Self Learning: </b> AI is streamlined for rapid self improvement. From the moment AGI is created, this speed of self improvement will result in artificial superintelligence potentially within days or weeks. </li>
+                        <li><b>Efficient: </b>doesn't drink, eat, or sleep, can work continuously </li>
+                        <li><b>Scalable: </b> not limited to a single brain. It could have thousands or millions of "brains" working tother all at once. </li>
+                        <li><b>Alien: </b> Does not have human instincts, emotions, or morals. </li>
+                        <li><b>Consicousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks, like a duck, and walks like a duck, then it's a duck. </li>
+                        <li><b>Not a tool:</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than that - it can act independently of humans. </li>
+                        <li><b>Incomprehensibile: </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like. </li>
+                        <li><b> Self-replicating: </b> Once created, it can spread like a virus. With a fully digital existence, it will almost impossible to destroy or contain it. </li>
+                        <li><b> Uncontrollable: </b> No matter what controls we put in place, artificial superintelligence could find a way to break free if it wants to. </li>
+                    
+                    </ul> 
 
 
                     <h2> Two Chain Theory</h2>
