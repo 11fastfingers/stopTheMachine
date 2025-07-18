@@ -235,12 +235,11 @@ function Index() {
                     
 
                     <p> I'm 20 years old, and from Australia - but don't hold that against me. <b>I don't drink alcohol</b>, for health reasons. I've never had a single drop my entire life!
-                        I don't follow sports. In terms of famous sports people, I couldn't name more than the fingers on one hand. I also <b> squat on the toilet.</b> Yes, you read that right. I perch up like a bird on the toilet seat. I read somewhere that 
-                        it's more "efficient" that way... 
+                        I don't follow sports. In terms of famous sports people, I couldn't name more than the fingers on one hand. I also <b> squat on the toilet.</b> Yes, you read that right. 
+                        I perch up like a bird on the toilet seat. I read somewhere that it's more "efficient" that way... 
                     </p>
 
-                    
-                    
+
                     <h2> How StopTheMachine Operates</h2>
                     <p> A couple of important things to mention. First, i'm the person behind StopTheMachine. Everything here is personally created and maintained by me - and only me. That means <b>I do all the designing, the writing, the programming, the advertising, </b> ect. 
                         And it will always be just me - nomatter what. So the point of this is too keep operating costs as low as possible, so that 100% of donations go to online awareness ads. Minor expenses like web hosting and that sort of stuff, that's very cheap and is covered by me personally.    
@@ -254,7 +253,7 @@ function Index() {
 
                     <h2> Legal Status</h2> 
                         <p>
-                        Another thing to mention: StopTheMachine is a non-profit initiative of an Australian sole-trader registered under the name "Beta Products". This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
+                        Another thing to mention: StopTheMachine is a non-profit initiative of an Australian  <b>sole-trader</b> registered under the name "Beta Products". This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
                         - could send me to jail. My personal assets could be seized, I could be sued, ect.  
                         </p>
                         <p>
