@@ -190,10 +190,12 @@ function Index() {
                             
                             leaderboard up to 50 I think is good. 
 
-                            Need to condense the leaderboard initially, say to 5 columns. But the user should be able to expand it to see 50. 
+                            Need to condense the leaderboard initially, say to 5 rows. But the user should be able to expand it to see 50. 
 
                             Only the top 50 are displayed. This prevents me from some tail risk.
                             
+
+                            same simple format: #n name unique visitors number. The number is the number of unique visitors to that link. Having column names is not necessary. 
                             */ }
 
 
