@@ -137,7 +137,7 @@ function Index() {
                     <h2>AI will take our jobs</h2>
                     <p> In 10 years time, up to 50% of our jobs could vanish as AI replaces human labour across industries.</p>
 
-                    <h2>AI will destabalize society</h2>
+                    <h2>AI will destabilize society</h2>
                     <p> Over the next 20 years, AI threatens to: </p>
                     <ul> 
                         <li>Seize control of news and media through mass disinformation</li>
@@ -170,7 +170,7 @@ function Index() {
                             </p>
 
                             <label>Name: </label>
-                            <input type="text" name="name" placeholder="type in a name or phrase to get your sharable link"/>
+                            <input type="text" name="name" placeholder="type in a name or phrase to get your shareable link"/>
                             <span> Link: <a>stopthemachine.org</a> </span>
 
                             <p>Total Unique Visitors: 0</p>
@@ -249,12 +249,12 @@ function Index() {
 
 
                     <h2> How StopTheMachine Operates</h2>
-                    <p> A couple of important things to mention. First, i'm the person behind StopTheMachine. Everything here is personally created and maintained by me - and only me. That means <b>I do all the designing, the writing, the programming, the advertising, </b> ect. 
-                        And it will always be just me - nomatter what. So the point of this is too keep operating costs as low as possible, so that 100% of donations go to online awareness ads. Minor expenses like web hosting and that sort of stuff, that's very cheap and is covered by me personally.    
+                    <p> A couple of important things to mention. First, i'm the person behind StopTheMachine. Everything here is personally created and maintained by me - and only me. That means <b>I do all the designing, the writing, the programming, the advertising, </b> etc. 
+                        And it will always be just me - no matter what. So the point of this is too keep operating costs as low as possible, so that 100% of donations go to online awareness ads. Minor expenses like web hosting and that sort of stuff, that's very cheap and is covered by me personally.    
                     </p>
 
                     <p>
-                        In terms of how it works, basically I do one simple thing. <b>I take in donations and use those donations to run online ads </b> warning people about the risks of AI. That's it. Every donation and every ad purchase is logged publically, so you can match things up. Additionally, I screen record every single ad purchase I make. Those screen recordings are also publically available.  
+                        In terms of how it works, basically I do one simple thing. <b>I take in donations and use those donations to run online ads </b> warning people about the risks of AI. That's it. Every donation and every ad purchase is logged publicly, so you can match things up. Additionally, I screen record every single ad purchase I make. Those screen recordings are also publicly available.  
                         
 
                     </p>
@@ -262,7 +262,7 @@ function Index() {
                     <h2> Legal Status</h2> 
                         <p>
                         Another thing to mention: StopTheMachine is a non-profit initiative of an Australian  <b>sole-trader</b> registered under the name "Beta Products". This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
-                        - could send me to jail. My personal assets could be seized, I could be sued, ect.  
+                        - could send me to jail. My personal assets could be seized, I could be sued, etc.  
                         </p>
                         <p>
                         I'm not registered as a charity. Unfortunately, that means <b>donations aren't tax deductible.</b> If I was a charity, that would mean an expensive board of directors, less control, and less speed. This way is simpler and cheaper.
@@ -285,7 +285,7 @@ function Index() {
 
                     <p>
 
-                        Ok, so there are no logins or accounts or anything like that. So I collect very little information. I store basic information about donations, and that information is public. But it's completely anonymous. People might see that "Bob" donated $100, but they don't know who Bob is. 
+                        Ok, so there are no logins or accounts or anything like that. So I collect very little information. I store basic information about donations, and that information is public. But it's <b>completely anonymous</b>. People might see that "Bob" donated $100, but they don't know who Bob is. 
 
                         I also need to determine unique visitors to the site, for the "Sharer leaderboard" to work. So <b> I collect IP addresses </b> to do that. However, that IP is encrypted. So the worst thing that can happen is this: 
                         if I get hacked someone can see that this IP address visited the site at some point in time. That's it. They don't know anything else, not who you are, or your email address, or if you visited the site once or 100 times, or if you donated or not. 
@@ -342,11 +342,11 @@ function Index() {
                         <li><b>Exponential Improvement: </b> the rate of improvement: Exponential. Right now we have very weak AI, but it is improving so rapidly that it is expected to reach superintelligence within 5 to 15 years. </li>
                         <li><b>Rapid Self Learning: </b> AI is streamlined for rapid self improvement. From the moment AGI is created, this speed of self improvement will result in artificial superintelligence potentially within days or weeks. </li>
                         <li><b>Efficient: </b>doesn't drink, eat, or sleep, can work continuously </li>
-                        <li><b>Scalable: </b> not limited to a single brain. It could have thousands or millions of "brains" working tother all at once. </li>
+                        <li><b>Scalable: </b> not limited to a single brain. It could have thousands or millions of "brains" working together all at once. </li>
                         <li><b>Alien: </b> Does not have human instincts, emotions, or morals. </li>
-                        <li><b>Consicousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks like a duck, and walks like a duck, then it's a duck. </li>
+                        <li><b>Consciousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks like a duck, and walks like a duck, then it's a duck. </li>
                         <li><b>Not a tool:</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than that - it can act independently of humans. </li>
-                        <li><b>Incomprehensibile: </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like. </li>
+                        <li><b>Incomprehensible: </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like. </li>
                         <li><b> Self-replicating: </b> Once created, it can spread like a virus. With a fully digital existence, it will almost impossible to destroy or contain it. </li>
                         <li><b> Uncontrollable: </b> No matter what controls we put in place, artificial superintelligence could find a way to break free if it wants to. </li>
                     
@@ -356,7 +356,7 @@ function Index() {
                     <h2> Two Chain Theory</h2>
                         
                         <p>
-                        Ok, right so if you imagine a chain, a chain is only as strong as its weakest link. If a single link breaks, then the whole chain falls appart. 
+                        Ok, right so if you imagine a chain, a chain is only as strong as its weakest link. If a single link breaks, then the whole chain falls apart. 
                         </p>
 
                         <b>1. The Alignment Chain. </b>
@@ -364,7 +364,7 @@ function Index() {
                         <p>
                         Artificial superintelligence will <b>make humans ants.</b>To try to control it is like an ant trying to control a human. That seems a little scary doesn't it? Hence, Alignment comes in. 
     
-                        But <b>alignment is a chain</b>, with a single breakage leading to human extinction. Once AGI is created, Pandara's Box is opened. The direction of possibility isn't on us figuring out a clever way to align AI. It's on Artificial superintelligence
+                        But <b>alignment is a chain</b>, with a single breakage leading to human extinction. Once AGI is created, Pandora's Box is opened. The direction of possibility isn't on us figuring out a clever way to align AI. It's on Artificial superintelligence
                         finding a way to break free of our control. Thus for alignment to work, we have to get very very lucky. 
                         </p>
                         <b> 2. The Social Chain </b>
@@ -378,7 +378,7 @@ function Index() {
                         </p>
                         
                         <p>
-                        Ok, so this is the problem. For us to not go extinct we have to get extremely lucky with aligment. And then for us to create a utopia, we have to get extremely lucky again. We can't get that lucky. If we create artificial superintelligence, the consequence is <b>either extinction or dystopia. </b>
+                        Ok, so this is the problem. For us to not go extinct we have to get extremely lucky with alignment. And then for us to create a utopia, we have to get extremely lucky again. We can't get that lucky. If we create artificial superintelligence, the consequence is <b>either extinction or dystopia. </b>
 
                         Now imagine: We stop the machine. We stop the creation of artificial superintelligence. No extinction risk. No dystopia risk. Everyone keeps their jobs. The future is so bright. We just need to stop this one little thing. <b> We need to Stop The Machine. </b>
                         
@@ -390,7 +390,7 @@ function Index() {
                     <h2> </h2> 
 
 
-                    <h2> Legal Discalimer</h2>
+                    <h2> Legal Disclaimer</h2>
 
                     <p>
                         Ok, so one thing I said was that every $1 donated warns 200 people. That was an approximation. $1 gets you from 100 to 600 impressions on Reddit. And in some cases people might be shown the same ad multiple times. 
