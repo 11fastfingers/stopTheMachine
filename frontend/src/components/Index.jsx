@@ -186,7 +186,7 @@ function Index() {
 
                             50 characters long limit 
 
-
+                            Profanity word block list, maybe just say "unavailable" if it contains profanity 
                             
                             
                             
