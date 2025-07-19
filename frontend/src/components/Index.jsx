@@ -196,12 +196,6 @@ function Index() {
                                 <input type="number" name="donationAmount" required min="0.50" step="0.01"/>
                                 <br></br>
 
-                                <label>Currency:</label>
-                                <select name="currency" defaultValue="USD" required>
-                                    <option value="USD">USD - United States Dollar</option>
-                                </select>
-                                <br></br>
-
                                 <label>Name: (optional)</label>
                                 <input type="text" name="name"/>
                                 <br></br><br></br>
