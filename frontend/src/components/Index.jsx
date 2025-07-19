@@ -110,7 +110,7 @@ function Index() {
 
         const form = event.target;
         const amount = parseFloat(form.donationAmount.value);
-        const currency = form.currency.value;
+        const currency = 'usd';
         const name = form.name.value || 'Anonymous';
 
 
