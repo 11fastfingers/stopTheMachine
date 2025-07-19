@@ -177,7 +177,20 @@ function Index() {
 
                             <p>Top Sharers: </p>
 
+                            {/*
                             
+                            
+                            Use hyphens to represent spaces. 
+
+                            Only allow letters a-z and digits, nothing else
+
+                            50 characters long limit 
+
+
+                            
+                            
+                            
+                            */ }
 
 
                         </div>
@@ -285,7 +298,6 @@ function Index() {
                         if I get hacked someone can see that this IP address visited the site at some point in time. That's it. They don't know anything else, not who you are, or your email address, or if you visited the site once or 100 times, or if you donated or not. 
                     </p>
 
-
                     <h2> Influences</h2>
 
                     <h3> Paul Graham</h3>
@@ -341,7 +353,7 @@ function Index() {
                         <li><b>Consciousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks like a duck, and walks like a duck, then it's a duck. </li>
                         <li><b>Not a tool:</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than that - it can act independently of humans. </li>
                         <li><b>Incomprehensible: </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like. </li>
-                        <li><b> Self-replicating: </b> Once created, it can spread like a virus. With a fully digital existence, it will almost impossible to destroy or contain it. </li>
+                        <li><b> Self-replicating: </b> Once created, it can spread like a virus. With a fully digital existence, it will be almost impossible to destroy or contain it. </li>
                         <li><b> Uncontrollable: </b> No matter what controls we put in place, artificial superintelligence could find a way to break free if it wants to. </li>
                     
                     </ul> 
@@ -383,7 +395,6 @@ function Index() {
 
                     <h2> </h2> 
 
-
                     <h2> Legal Disclaimer</h2>
 
                     <p>
@@ -394,6 +405,9 @@ function Index() {
                         On a final note, all StopTheMachine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. StopTheMachine is not involved in any activism of any kind, nor is any particular solution endorsed. 
                         If there is action taken against AI, regulatory or otherwise, it is completely unrelated to StopTheMachine. 
                     </p>
+                    
+                    {/* requests for support come here if needed 
+                    */}
                 
                     <div id="about-container">
                         <a id="home" onClick={homeAction} > home</a>
