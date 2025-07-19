@@ -377,7 +377,7 @@ function Index() {
 
                         <p>
                         Ok, let's say we succeed. We've done it, we've figured it out. We don't go extinct! That's pretty neat isn't it? I don't know about you but I like not going extinct.
-                        Anyway, right, so back to the topic. Now because artificial superintelligence is just so powerful, it means that society will be transformed into either a utopia or a dystopia.
+                        Anyway, right, so back to the topic. Now because artificial superintelligence is just so powerful, it means that society will be transformed into either a <b>utopia or a dystopia</b>.
                         
                         Now for us to create a utopia, a social chain is required. AI needs to be controlled equally by all humans. A single break in this long egalitarian chain, where one person has more control over AI than another, eventually leads to dystopia.
                         Let me explain. Humans, after artificial superintelligence, will no longer have any power. So if an individual, a small group, or even a single country controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a<b> dystopia which we could never escape. </b>
