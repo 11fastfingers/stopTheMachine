@@ -188,7 +188,11 @@ function Index() {
 
                             Profanity word block list, maybe just say "unavailable" if it contains profanity 
                             
-                            
+                            leaderboard up to 50 I think is good. 
+
+                            Need to condense the leaderboard initially, say to 5 columns. But the user should be able to expand it to see 50. 
+
+                            Only the top 50 are displayed. This prevents me from some tail risk.
                             
                             */ }
 
