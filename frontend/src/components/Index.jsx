@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGP
 
 function Index() {
 
-
+    const [totalVisitors, setTotalVisitors] = useState(0);
 
 
     const [totalDonations, setTotalDonations] = useState(null);
@@ -173,7 +173,7 @@ function Index() {
                             <input type="text" name="name" placeholder="type in a name or phrase to get your shareable link"/>
                             <span> Link: <a>stopthemachine.org</a> </span>
 
-                            <p>Total Unique Visitors: 0</p>
+                            <p>Total Unique Visitors: {totalVisitors} </p>
 
                             <p>Top Sharers: </p>
 
@@ -380,7 +380,7 @@ function Index() {
                         Anyway, right, so back to the topic. Now because artificial superintelligence is just so powerful, it means that society will be transformed into either a <b>utopia or a dystopia</b>.
                         
                         Now for us to create a utopia, a social chain is required. AI needs to be controlled equally by all humans. A single break in this long egalitarian chain, where one person has more control over AI than another, eventually leads to dystopia.
-                        Let me explain. Humans, after artificial superintelligence, will no longer have any power. So if an individual, a small group, or even a single country controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a<b> dystopia which we could never escape. </b>
+                        Let me explain. Humans, after artificial superintelligence, <b>will no longer have any power</b>. So if an individual, a small group, or even a single country controlled artificial superintelligence... in a world where individual humans are no longer powerful... we'd be in a<b> dystopia which we could never escape. </b>
                         </p>
                         
                         <p>
@@ -402,7 +402,7 @@ function Index() {
                     </p>
 
                     <p>
-                        On a final note, all StopTheMachine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. StopTheMachine is not involved in any activism of any kind, nor is any particular solution endorsed. 
+                        On a final note, all StopTheMachine does is raise awareness about the risks of AI. I take donations, I buy ads. That is it - nothing else. <b>StopTheMachine is not involved in activism </b> of any kind, nor is any particular solution endorsed. 
                         If there is action taken against AI, regulatory or otherwise, it is completely unrelated to StopTheMachine. 
                     </p>
                     
