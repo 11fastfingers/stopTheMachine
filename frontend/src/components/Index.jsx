@@ -12,9 +12,28 @@ const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGP
 function Index() {
 
 
+
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
 
+    
+    const normalizeName = (input) => {
+
+        const raw = input.toLowerCase(); 
+        if (bannedwords.some(word => raw.includes(word))) {
+            alert("bad word detected")
+        } else { 
+            return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
+        }
+
+        
+    };
+
+ 
+
     const [referralName, setReferralName] = useState('');
+    const normalizedName = normalizeName(referralName);
+
+
     const [referralLink, setReferralLink] = useState('');
     const [referralError, setReferralError] = useState(0);
 
@@ -30,17 +49,7 @@ function Index() {
     const [topSharers, setTopSharers] = useState([]);
 
 
-    const normalizeName = (input) => {
 
-        const raw = input.toLowerCase(); 
-        if (bannedwords.some(word => raw.includes(word))) {
-            alert("bad word detected")
-        } else { 
-            return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
-        }
-
-        
-    };
 
 
 
