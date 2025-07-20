@@ -319,31 +319,10 @@ function Index() {
 
                             <img
                                 onClick={() => setTopSharersMinimised(!topSharersMinimised)}
-                                className="down-arrow"
+                                className={`down-arrow ${topSharersMinimised ? 'rotated' : ''}`}
                                 src={downArrow}
+                                draggable={false}
                             />
-
-                            {/*
-                            
-                            
-                            Use hyphens to represent spaces. 
-
-                            Only allow letters a-z and digits, nothing else
-
-                            50 characters long limit 
-
-                            Profanity word block list, maybe just say "unavailable" if it contains profanity 
-                            
-                            leaderboard up to 50 I think is good. 
-
-                            Need to condense the leaderboard initially, say to 5 rows. But the user should be able to expand it to see 50. 
-
-                            Only the top 50 are displayed. This prevents me from some tail risk.
-                            
-                            Visitors are only counted from stopthemachine.org/something not from the ads. 
-
-                            same simple format: #n name unique visitors number. The number is the number of unique visitors to that link. Having column names is not necessary. 
-                            */ }
 
 
                         </div>
