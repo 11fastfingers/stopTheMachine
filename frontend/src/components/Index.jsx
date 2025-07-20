@@ -317,12 +317,11 @@ function Index() {
                                 </tbody>
                             </table>
 
-                            <button
+                            <img
                                 onClick={() => setTopSharersMinimised(!topSharersMinimised)}
-                                className="toggle-button"
-                            >
-                                {topSharersMinimised ? 'Show More' : 'Show Less'}
-                            </button>
+                                className="down-arrow"
+                                src={downArrow}
+                            />
 
                             {/*
                             
