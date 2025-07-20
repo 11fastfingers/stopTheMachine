@@ -285,12 +285,15 @@ function Index() {
 
                             <input 
                                 type="text" 
-                                name="name" 
+                                name="nope"
                                 placeholder="type in a name, word, or phrase"
                                 value= {referralName}
                                 onChange={(e) => setReferralName(e.target.value)}
                                 id="link-preview-input"
                                 className={validReferral ? 'input-valid' : 'input-invalid'}
+                                autoComplete="off"
+                                autoCorrect="off"
+                                spellCheck="false"
                             />
                             <span> <a>stopthemachine.org/{normalizedName}</a> </span>
 
