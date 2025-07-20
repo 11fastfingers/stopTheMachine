@@ -46,7 +46,7 @@ function Index() {
     
     const [topDonors, setTopDonors] = useState([]);
     
-    const [topSharers, setTopSharers] = useState("Loading...");
+    const [topSharers, setTopSharers] = useState([]);
 
 
 
@@ -305,11 +305,11 @@ function Index() {
                             <p>Top Sharers: </p>
                             <table>
                                 <tbody>
-                                    {topDonors.map((donor, index) => (
-                                        <tr key={donor.name}>
+                                    {topSharers.map((sharer, index) => (
+                                        <tr key={sharer.name}>
                                             <td>#{index + 1}</td>
-                                            <td>{donor.name}</td>
-                                            <td>{(donor.total_donated / 100).toFixed(2)}</td>
+                                            <td>{sharer.name}</td>
+                                            <td>{sharer.total}</td>
                                         </tr>
                                     ))}
                                 </tbody>
