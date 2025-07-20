@@ -242,7 +242,7 @@ app.post('/referral', (req, res) => {
     const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_shares WHERE rank = 50').get(); 
 
     if (currentTotal.total > LowestLeaderboardTotal.total) {
-        const updateLeaderboard = db.prepare('UPDATE top_shares SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal); 
+        const updateLeaderboard = db.prepare('UPDATE top_shares SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
 
         function updateRankings() {
             // What I want to do here is go over all the ranks and make sure that they are in order
