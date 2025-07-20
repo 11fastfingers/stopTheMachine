@@ -14,14 +14,16 @@ function Index() {
 
 
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
-
+    const [validReferral, setValidReferral] = useState(true); 
 
     const normalizeName = (input) => {
 
         const raw = input.toLowerCase(); 
         if (bannedwords.some(word => raw.includes(word))) {
-            alert("bad word detected")
+            setValidReferral(false); 
+
         } else { 
+            validReferral(true); 
             return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
         }
 
@@ -30,8 +32,11 @@ function Index() {
 
  
 
+    const [touched, setTouched] = useState(false);
+    
     const [referralName, setReferralName] = useState('');
-    const normalizedName = normalizeName(referralName);
+    const [normalizedName, setNormalizedName] = useState(''); 
+    
 
 
     const [referralError, setReferralError] = useState(0);
@@ -49,6 +54,25 @@ function Index() {
 
 
 
+    useEffect(() => {
+        const raw = referralName.toLowerCase();
+        
+
+        if (bannedwords.some(word => raw.includes(word))) {
+          setValidReferral(false);
+          setNormalizedName('');
+        } else {
+          setValidReferral(true);
+          const clean = referralName
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, ' ')
+            .replace(/ /g, '-')
+            .replace(/[^a-z0-9-]/g, '')
+            .slice(0, 50);
+          setNormalizedName(clean);
+        }
+    }, [referralName]);
 
 
 
@@ -207,6 +231,7 @@ function Index() {
                                 value= {referralName}
                                 onChange={(e) => setReferralName(e.target.value)}
                                 id="link-preview-input"
+                                className={validReferral ? 'input-valid' : 'input-invalid'}
                             />
                             <span> <a>stopthemachine.org/{normalizedName}</a> </span>
 
