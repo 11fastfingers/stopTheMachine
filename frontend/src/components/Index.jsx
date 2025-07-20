@@ -301,7 +301,7 @@ function Index() {
                                     <tr key={donor.name}>
                                         <td>#{index + 1}</td>
                                         <td>{donor.name}</td>
-                                        <td>${(donor.total_donated / 100).toFixed(2)}</td>
+                                        <td>{(donor.total_donated / 100).toFixed(2)}</td>
                                     </tr>
                                 ))}
                             </table>
