@@ -10,6 +10,11 @@ const path = require('path');
 const app = express(); 
 const port = process.env.PORT || 3000;
 
+const ipBlockTracker = {}; // Key: IP block, Value: Array of timestamps 
+
+function getIpBlock(ip) {
+    return ip.split('.').slice(0, 3).join('.');
+}
 
 
 // Set up database 
@@ -167,6 +172,8 @@ app.post('/referral', (req, res) => {
     const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket.remoteAddress;
 
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
+
+    if (!ip) return false; 
 
     // Check length
     if (typeof ref !== 'string' || ref.length === 0 || ref.length > 50) return false;
