@@ -49,6 +49,8 @@ function Index() {
     const [topSharers, setTopSharers] = useState([]);
 
 
+    const [topSharersMinimised, setTopSharersMinimised] = useState(true); 
+
 
     useEffect(() => {
         const ref = localStorage.getItem('referrer');
@@ -305,7 +307,7 @@ function Index() {
                             <p>Top Sharers: </p>
                             <table>
                                 <tbody>
-                                    {topSharers.map((sharer, index) => (
+                                    {(topSharersMinimised ? topSharers.slice(0, 3) : topSharers.slice(0, 50)).map((sharer, index) => (
                                         <tr key={sharer.name}>
                                             <td>#{index + 1}</td>
                                             <td>{sharer.name}</td>
@@ -314,6 +316,13 @@ function Index() {
                                     ))}
                                 </tbody>
                             </table>
+
+                            <button
+                                onClick={() => setTopSharersMinimised(!topSharersMinimised)}
+                                className="toggle-button"
+                            >
+                                {topSharersMinimised ? 'Show More' : 'Show Less'}
+                            </button>
 
                             {/*
                             
