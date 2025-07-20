@@ -370,7 +370,6 @@ function Index() {
                                 src={downArrow}
                                 draggable={false} 
                             />
-
                         </div>
                         <div id="about-container">
                             <a id="about" onClick={aboutAction} > about</a>

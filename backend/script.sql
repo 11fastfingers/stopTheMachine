@@ -212,3 +212,27 @@ BEGIN
     WHERE id = 1;
 END;
 
+
+
+/*
+
+Minor initialisation of the donors
+
+wait, need to create a top 50 donors table first 
+ */
+
+DROP TABLE donations_so_far; 
+CREATE TABLE donations_so_far (
+    id INTEGER PRIMARY KEY, 
+    total INTEGER DEFAULT 0 
+); 
+
+DROP TABLE top_donors; 
+CREATE TABLE top_donors (
+    rank INTEGER PRIMARY KEY CHECK(rank >= 1 AND rank <= 50),
+    name TEXT UNIQUE, 
+    total INTEGER DEFAULT 0
+);
+
+
+INSERT INTO doonations_so_far (name, total_donated) VALUES ('placeholder1', 0);
