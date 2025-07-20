@@ -42,6 +42,16 @@
 }
 
 
+#copy-button {
+    border: none; 
+    background: none; 
+}
+
+#copy-button:hover {
+    cursor: pointer; 
+}
+
+
   
 .text .arrow {
     height: 1.25rem;

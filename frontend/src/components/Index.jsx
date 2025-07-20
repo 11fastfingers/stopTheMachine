@@ -168,7 +168,16 @@ function Index() {
         stripe.redirectToCheckout({ sessionId: data.id });
     }
 
-
+    const handleCopy = (name) => {
+        const link = `https://stopthemachine.org/${name}`;
+        navigator.clipboard.writeText(link)
+            .then(() => {
+                console.log('Link copied to clipboard:', link);
+            })
+            .catch(err => {
+                console.error('Failed to copy link:', err);
+            });
+    };
 
 
     return (
@@ -221,6 +230,15 @@ function Index() {
                                 className={validReferral ? 'input-valid' : 'input-invalid'}
                             />
                             <span> <a>stopthemachine.org/{normalizedName}</a> </span>
+
+                            <button 
+                                onClick={() => handleCopy(normalizedName)}
+                                title="Copy link"
+                                aria-label="Copy link"
+                                id="copy-button"
+                            >
+                                🔗
+                            </button>           
 
                             <p>Shares So Far {totalShares} </p>
 
