@@ -243,17 +243,21 @@ app.post('/referral', (req, res) => {
 
     if (currentTotal.total > LowestLeaderboardTotal.total) {
         const updateLeaderboard = db.prepare('UPDATE top_sharers SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
-
+        
         function updateRankings() {
-            // What I want to do here is go over all the ranks and make sure that they are in order
-
-            console.log("runs"); 
-
-
             const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC').all();
-            const update = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
+        
+            const updateTemp = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
+            const updateFinal = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
+        
+            // Step 1: Assign temporary negative ranks to avoid UNIQUE constraint collisions
             top.forEach((row, index) => {
-                update.run(index + 1, row.name);
+                updateTemp.run(-(index + 1), row.name);
+            });
+        
+            // Step 2: Reassign correct positive ranks
+            top.forEach((row, index) => {
+                updateFinal.run(index + 1, row.name);
             });
         }
 
