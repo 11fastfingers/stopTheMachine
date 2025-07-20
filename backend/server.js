@@ -230,6 +230,9 @@ app.post('/referral', (req, res) => {
     `);
     incrementReferrer.run(ref);
 
+    // Now I n
+
+
     /*
        Now I need to check if the current referrer has a total greater than the total for the 50th spot in the leaderboard. 
     */

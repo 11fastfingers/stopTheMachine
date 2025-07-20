@@ -202,3 +202,13 @@ INSERT INTO top_shares (rank, name, total) VALUES (47, 'placeholder47', 0);
 INSERT INTO top_shares (rank, name, total) VALUES (48, 'placeholder48', 0);
 INSERT INTO top_shares (rank, name, total) VALUES (49, 'placeholder49', 0);
 INSERT INTO top_shares (rank, name, total) VALUES (50, 'placeholder50', 0);
+
+
+CREATE TRIGGER increment_shares_so_far_after_referrer_update
+AFTER UPDATE OF total ON referrer
+BEGIN
+    UPDATE shares_so_far
+    SET total = total + 1
+    WHERE id = 1;
+END;
+
