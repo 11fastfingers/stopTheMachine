@@ -223,7 +223,7 @@ function Index() {
                                 <br></br>
                             </form>
 
-                            Total Donations: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}
+                            Donations So Far: {totalDonations !== null ? `$${totalDonations.toFixed(2)}` : 'Loading...'}
                             <br></br>
                             <br></br>
 
