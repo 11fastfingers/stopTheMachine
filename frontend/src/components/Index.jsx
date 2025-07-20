@@ -52,10 +52,31 @@ function Index() {
         const ref = localStorage.getItem('referrer');
         if (ref) {
             const timer = setTimeout(() => {  
-                alert("times up"); 
-            }, 5000);
+                
+                // Ok, so now I need to send two things to the backend. 
 
-            
+                // First I need to send the referral name. 
+                // Second I need to send the IP address. 
+
+                // endpoint /referral (BASE_URL)
+
+                sendReferral();
+                const sendReferral = async () => {
+                    try {
+                        await fetch(`${BASE_URL}/referral`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ ref: ref}),
+                        });
+                    } catch (err) {
+                        console.error('Error sending referral:', err);
+                    }
+                };
+                
+
+            }, 5000);
     
             return () => clearTimeout(timer);
         }

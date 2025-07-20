@@ -161,6 +161,12 @@ app.get('/', (req, res) => {
 });
 
 
+app.post('/referral', (req, res) => {
+    
+}); 
+
+
+
 app.post('/donate', async (req, res) => {
   const { amount, currency} = req.body;
   let name = req.body.name || 'Anonymous';
