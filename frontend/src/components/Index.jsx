@@ -11,6 +11,11 @@ const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGP
 
 function Index() {
 
+    const [referralName, setReferralName] = useState('');
+    const [referralLink, setReferralLink] = useState('');
+    const [referralError, setReferralError] = useState(0);
+
+
     const [totalShares, setTotalShares] = useState(0);
 
 
@@ -169,9 +174,16 @@ function Index() {
                             Each time a new person visits your link, "John Smith" will rise on the leaderboard.
                             </p>
 
-                            <label>Name: </label>
-                            <input type="text" name="name" placeholder="type in a name or phrase to get your shareable link"/>
-                            <span> Link: <a>stopthemachine.org</a> </span>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                placeholder="type in a name, word, or phrase"
+                                value= {referralName}
+                                onChange={(e) => setReferralName(e.target.value)}
+                                id="link-preview-input"
+                            />
+                            <br></br>
+                            <span> Link: <a>stopthemachine.org/{referralLink}</a> </span>
 
                             <p>Shares So Far {totalShares} </p>
 

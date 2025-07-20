@@ -45,6 +45,12 @@
     flex-shrink: 0; /* Prevents resizing */
 }
 
+#link-preview-input {
+    font-size: 1.25rem; 
+    width: 18rem;
+
+}
+
 #donation-form input {
     margin-left: 0.5rem; 
     font-size: 1.25rem; 
