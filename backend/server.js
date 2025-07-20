@@ -247,6 +247,9 @@ app.post('/referral', (req, res) => {
         function updateRankings() {
             // What I want to do here is go over all the ranks and make sure that they are in order
 
+            console.log("runs"); 
+
+
             const top = db.prepare('SELECT name, total FROM top_shares ORDER BY total DESC').all();
             const update = db.prepare('UPDATE top_shares SET rank = ? WHERE name = ?');
             top.forEach((row, index) => {
