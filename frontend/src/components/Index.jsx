@@ -15,21 +15,6 @@ function Index() {
 
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
     const [validReferral, setValidReferral] = useState(true); 
-
-    const normalizeName = (input) => {
-
-        const raw = input.toLowerCase(); 
-        if (bannedwords.some(word => raw.includes(word))) {
-            setValidReferral(false); 
-
-        } else { 
-            validReferral(true); 
-            return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
-        }
-
-        
-    };
-
  
 
     const [touched, setTouched] = useState(false);
@@ -57,8 +42,10 @@ function Index() {
     useEffect(() => {
         const raw = referralName.toLowerCase();
         
+        const containsBannedWord = bannedwords.some(word => raw.includes(word));
+        const containsInvalidChars = /[^a-z0-9\s]/i.test(referralName); // disallow anything not letter, digit, or space
 
-        if (bannedwords.some(word => raw.includes(word))) {
+        if (containsBannedWord || containsInvalidChars) {
           setValidReferral(false);
           setNormalizedName('');
         } else {
