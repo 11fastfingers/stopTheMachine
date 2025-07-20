@@ -3,6 +3,29 @@
 
 */ 
 
+
+DROP TABLE referrer; 
+CREATE TABLE referrer (
+    name TEXT PRIMARY KEY, 
+    total INTEGER
+); 
+
+DROP TABLE shares_so_far; 
+CREATE TABLE shares_so_far (
+    id INTEGER PRIMARY KEY, 
+    total INTEGER DEFAULT 0 
+); 
+
+
+DROP TABLE top_sharers; 
+CREATE TABLE top_sharers (
+    rank INTEGER PRIMARY KEY CHECK(rank >= 1 AND rank <= 50),
+    name TEXT NOT NULL UNIQUE, 
+    total INTEGER NOT NULL
+); 
+
+
+
 DROP TABLE donor; 
 CREATE TABLE donor (
     name TEXT PRIMARY KEY,
