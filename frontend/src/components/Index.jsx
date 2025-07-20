@@ -53,6 +53,15 @@ function Index() {
     const [topDonorsMinimised, setTopDonorsMinimised] = useState(true); 
 
 
+    function deconstructSlug(slug) {
+        if (!slug) return '';
+        return slug
+            .split('-')                              // split by hyphens
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize first letter
+            .join(' ');                              // rejoin with spaces
+    }
+
+
     useEffect(() => {
         const ref = localStorage.getItem('referrer');
         if (ref) {
@@ -361,7 +370,7 @@ function Index() {
                                     {(topDonorsMinimised ? topDonors.slice(0, 3) : topDonors.slice(0, 50)).map((donor, index) => (
                                         <tr key={donor.name}>
                                             <td>#{index + 1}</td>
-                                            <td>{donor.name}</td>
+                                            <td>{deconstructSlug(donor.name)}</td>
                                             <td>{(donor.total_donated / 100).toFixed(2)}</td>
                                         </tr>
                                     ))}
