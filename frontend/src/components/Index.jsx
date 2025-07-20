@@ -70,16 +70,15 @@ function Index() {
     }, [referralName]);
 
 
-
     useEffect(() => {
         const pathname = location.pathname;
         const slug = pathname.slice(1); // removes the leading "/"
-    
-        if (slug) {
+      
+        if (slug && pathname !== '/') {
           localStorage.setItem('referralSlug', slug);
-          navigate('/'); // Redirect to root
+          navigate('/');
         }
-    }, []);
+    }, [location.pathname, navigate]);
 
 
     const [openDropdowns, setOpenDropdowns] = useState({
