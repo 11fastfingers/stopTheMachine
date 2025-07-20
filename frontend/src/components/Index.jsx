@@ -15,7 +15,7 @@ function Index() {
 
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
 
-    
+
     const normalizeName = (input) => {
 
         const raw = input.toLowerCase(); 
@@ -34,7 +34,6 @@ function Index() {
     const normalizedName = normalizeName(referralName);
 
 
-    const [referralLink, setReferralLink] = useState('');
     const [referralError, setReferralError] = useState(0);
 
 
@@ -209,7 +208,7 @@ function Index() {
                                 onChange={(e) => setReferralName(e.target.value)}
                                 id="link-preview-input"
                             />
-                            <span> <a>stopthemachine.org/{referralLink}</a> </span>
+                            <span> <a>stopthemachine.org/{normalizedName}</a> </span>
 
                             <p>Shares So Far {totalShares} </p>
 
