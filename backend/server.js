@@ -172,18 +172,38 @@ app.post('/referral', (req, res) => {
     const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket.remoteAddress;
 
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
+    const ipBlock = getIpBlock(ip);
+    const now = Date.now();
+
+
+     // Check length
+     if (typeof ref !== 'string' || ref.length === 0 || ref.length > 50) return false;
+
+     // Only letters, digits, and hyphens
+     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(ref)) return false;
+ 
+     // Check for banned words (case insensitive just in case)
+     const lowerRef = ref.toLowerCase();
+     if (bannedwords.some(word => lowerRef.includes(word))) return false;
 
     if (!ip) return false; 
 
-    // Check length
-    if (typeof ref !== 'string' || ref.length === 0 || ref.length > 50) return false;
 
-    // Only letters, digits, and hyphens
-    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(ref)) return false;
 
-    // Check for banned words (case insensitive just in case)
-    const lowerRef = ref.toLowerCase();
-    if (bannedwords.some(word => lowerRef.includes(word))) return false;
+    // Initialize IP Block timestamp array if needed 
+    if (!ipBlockTracker[ipBlock]) {
+        ipBlockTracker[ipBlock] = [];
+    }
+
+    // Remove timestamps older than 1 hour if needed
+    ipBlockTracker[ipBlock] = ipBlockTracker[ipBlock].filter(ts => now - ts < 60 * 60 * 1000);
+
+   
+    if (ipBlockTracker[ipBlock].length >= 3) {
+        return false; 
+    }
+
+    ipBlockTracker[ipBlock].push(now);
 
     return true;
 
