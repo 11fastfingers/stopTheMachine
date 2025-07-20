@@ -9,8 +9,16 @@ import adultJames from '../images/adultPicture.webp';
 import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGPHQsIMK4qGunf6XiQfS3sB1aCabisxDwgQEBSg0Q1ndwxOXxyAtP00vIyFBEH4'); // Your Stripe Publishable Key
 
+
+import { useNavigate, useLocation } from 'react-router-dom';
+
+
+
 function Index() {
 
+
+    const navigate = useNavigate();
+    const location = useLocation();
 
 
     const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
@@ -62,6 +70,16 @@ function Index() {
     }, [referralName]);
 
 
+
+    useEffect(() => {
+        const pathname = location.pathname;
+        const slug = pathname.slice(1); // removes the leading "/"
+    
+        if (slug) {
+          localStorage.setItem('referralSlug', slug);
+          navigate('/'); // Redirect to root
+        }
+    }, []);
 
 
     const [openDropdowns, setOpenDropdowns] = useState({
