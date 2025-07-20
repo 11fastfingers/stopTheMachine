@@ -47,6 +47,20 @@ function Index() {
 
 
 
+
+    useEffect(() => {
+        const ref = localStorage.getItem('referrer');
+        if (ref) {
+            const timer = setTimeout(() => {  
+                alert("times up"); 
+            }, 5000);
+
+            
+    
+            return () => clearTimeout(timer);
+        }
+    }, []);
+
     useEffect(() => {
         const raw = referralName.toLowerCase();
         
@@ -75,7 +89,7 @@ function Index() {
         const slug = pathname.slice(1); // removes the leading "/"
       
         if (slug && pathname !== '/') {
-          localStorage.setItem('referralSlug', slug);
+          localStorage.setItem('referrer', slug);
           navigate('/');
         }
     }, [location.pathname, navigate]);
