@@ -239,10 +239,10 @@ app.post('/referral', (req, res) => {
 
     const currentTotal = db.prepare('SELECT total FROM referrer WHERE name = ?').get(ref); 
     
-    const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_shares WHERE rank = 50').get(); 
+    const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_sharers WHERE rank = 50').get(); 
 
     if (currentTotal.total > LowestLeaderboardTotal.total) {
-        const updateLeaderboard = db.prepare('UPDATE top_shares SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
+        const updateLeaderboard = db.prepare('UPDATE top_sharers SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
 
         function updateRankings() {
             // What I want to do here is go over all the ranks and make sure that they are in order
@@ -250,8 +250,8 @@ app.post('/referral', (req, res) => {
             console.log("runs"); 
 
 
-            const top = db.prepare('SELECT name, total FROM top_shares ORDER BY total DESC').all();
-            const update = db.prepare('UPDATE top_shares SET rank = ? WHERE name = ?');
+            const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC').all();
+            const update = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
             top.forEach((row, index) => {
                 update.run(index + 1, row.name);
             });
