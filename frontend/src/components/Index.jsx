@@ -33,11 +33,13 @@ function Index() {
     const normalizeName = (input) => {
 
         const raw = input.toLowerCase(); 
+        if (bannedwords.some(word => raw.includes(word))) {
+            alert("bad word detected")
+        } else { 
+            return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
+        }
 
-
-
-
-        return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
+        
     };
 
 
