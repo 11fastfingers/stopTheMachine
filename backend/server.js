@@ -212,8 +212,11 @@ app.post('/referral', (req, res) => {
     }
 
     /*
-
+       Right, so we have a new user. That means I need to add it to the database
     */
+
+    const addUser = db.prepare('INSERT INTO person_referred (ip) VALUES (?)'); 
+    addUser.run(ip);
 
 
 
