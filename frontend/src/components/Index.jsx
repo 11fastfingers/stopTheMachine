@@ -23,7 +23,7 @@ function Index() {
     const location = useLocation();
 
 
-    const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
+    const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']; 
     const [validReferral, setValidReferral] = useState(true); 
  
 
