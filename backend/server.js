@@ -241,7 +241,7 @@ app.post('/referral', (req, res) => {
     
     const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_shares WHERE rank = 50').get(); 
 
-    if (currentTotal > LowestLeaderboardTotal.total) {
+    if (currentTotal.total > LowestLeaderboardTotal.total) {
         const updateLeaderboard = db.prepare('UPDATE top_shares SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal); 
 
         function updateRankings() {
