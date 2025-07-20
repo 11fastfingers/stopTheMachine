@@ -541,7 +541,7 @@ function Index() {
 
                     <p>
                         Ok, so one thing I said was that every $1 donated warns 200 people. That was an approximation. $1 gets you from 100 to 600 impressions on Reddit. And in some cases people might be shown the same ad multiple times. 
-                        Also if you a donating a small amount, there will be less impact. E.g donating 50c won't warn 100 people, because Stripe takes 30c as it's transaction fee. 
+                        Also if you are donating a small amount, there will be less impact. E.g donating 50c won't warn 100 people, because Stripe takes 30c as it's transaction fee. 
                     </p>
 
                     <p>
