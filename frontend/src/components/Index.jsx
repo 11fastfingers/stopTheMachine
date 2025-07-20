@@ -355,7 +355,7 @@ function Index() {
                             Top Donors: 
                             <table>
                                 <tbody>
-                                    {topDonors.map((donor, index) => (
+                                    {(topDonorsMinimised ? topDonors.slice(0, 3) : topDonors.slice(0, 50)).map((donor, index) => (
                                         <tr key={donor.name}>
                                             <td>#{index + 1}</td>
                                             <td>{donor.name}</td>
