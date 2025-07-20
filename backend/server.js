@@ -205,6 +205,13 @@ app.post('/referral', (req, res) => {
 
     ipBlockTracker[ipBlock].push(now);
 
+    /* Now I need to check if the user is already in the database 
+
+
+
+    */ 
+
+
     return true;
 
 }); 

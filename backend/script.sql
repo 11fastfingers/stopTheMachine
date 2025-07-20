@@ -4,6 +4,11 @@
 */ 
 
 
+DROP TABLE person_referred; 
+CREATE TABLE person_referred (
+    ip TEXT PRIMARY KEY
+); 
+
 DROP TABLE referrer; 
 CREATE TABLE referrer (
     name TEXT PRIMARY KEY, 
@@ -20,8 +25,8 @@ CREATE TABLE shares_so_far (
 DROP TABLE top_sharers; 
 CREATE TABLE top_sharers (
     rank INTEGER PRIMARY KEY CHECK(rank >= 1 AND rank <= 50),
-    name TEXT NOT NULL UNIQUE, 
-    total INTEGER NOT NULL
+    name TEXT UNIQUE, 
+    total INTEGER
 ); 
 
 
@@ -125,10 +130,13 @@ END;
 
 
 
+
+/* 
+   So this stuff was for aligning the very first donation for testing purposes. So my accounting records and stripe's matched up perfectly. 
+*/
 UPDATE total_donations SET total = 1818 WHERE id = 1; 
 
 UPDATE pending SET total = 1142 WHERE id = 1;
-
 
 
 UPDATE spending_totals SET total = 745 WHERE account = 'stripe'; 
