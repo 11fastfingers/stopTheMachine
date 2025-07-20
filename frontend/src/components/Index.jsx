@@ -316,12 +316,11 @@ function Index() {
                                     ))}
                                 </tbody>
                             </table>
-
                             <img
                                 onClick={() => setTopSharersMinimised(!topSharersMinimised)}
-                                className={`down-arrow ${topSharersMinimised ? 'rotated' : ''}`}
+                                className={`down-arrow ${!topSharersMinimised ? 'rotated' : ''}`}
                                 src={downArrow}
-                                draggable={false}
+                                draggable={false} 
                             />
 
 
