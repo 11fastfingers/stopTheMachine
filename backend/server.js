@@ -211,17 +211,48 @@ app.post('/referral', (req, res) => {
         return false;
     }
 
-    /*
-       Right, so we have a new user. That means I need to add it to the database
-    */
+
 
     const addUser = db.prepare('INSERT INTO person_referred (ip) VALUES (?)'); 
     addUser.run(ip);
 
+    const referrerExists = db.prepare('SELECT 1 FROM referrer WHERE name = ?').get(ref);
+    if (!referrerExists) {
+        const addReferrer = db.prepare('INSERT INTO referrer (name) VALUES (?)');
+        addReferrer.run(ref);
+    }
 
 
+    const incrementReferrer = db.prepare(`
+        UPDATE referrer 
+        SET total = COALESCE(total, 0) + 1 
+        WHERE name = ?
+    `);
+    incrementReferrer.run(ref);
 
+    /*
+       Now I need to check if the current referrer has a total greater than the total for the 50th spot in the leaderboard. 
+    */
 
+    const currentTotal = db.prepare('SELECT total FROM referrer WHERE name = ?').get(ref); 
+    
+    const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_shares WHERE rank = 50').get(); 
+
+    if (currentTotal > LowestLeaderboardTotal.total) {
+        const updateLeaderboard = db.prepare('UPDATE top_shares SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal); 
+
+        function updateRankings() {
+            // What I want to do here is go over all the ranks and make sure that they are in order
+
+            const top = db.prepare('SELECT name, total FROM top_shares ORDER BY total DESC').all();
+            const update = db.prepare('UPDATE top_shares SET rank = ? WHERE name = ?');
+            top.forEach((row, index) => {
+                update.run(index + 1, row.name);
+            });
+        }
+
+        updateRankings(); 
+    }
 
 
 
