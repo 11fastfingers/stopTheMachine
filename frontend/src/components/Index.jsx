@@ -27,6 +27,13 @@ function Index() {
     const [topSharers, setTopSharers] = useState([]);
 
 
+    const normalizeName = (input) => {
+        return input.toLowerCase().trim().replace(/\s+/g, ' ').replace(/ /g, '-')
+    };
+
+
+
+
     const [openDropdowns, setOpenDropdowns] = useState({
         Info: false,
         terms: false,
@@ -182,8 +189,7 @@ function Index() {
                                 onChange={(e) => setReferralName(e.target.value)}
                                 id="link-preview-input"
                             />
-                            <br></br>
-                            <span> Link: <a>stopthemachine.org/{referralLink}</a> </span>
+                            <span> <a>stopthemachine.org/{referralLink}</a> </span>
 
                             <p>Shares So Far {totalShares} </p>
 
