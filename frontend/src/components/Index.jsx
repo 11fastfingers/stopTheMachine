@@ -50,6 +50,7 @@ function Index() {
 
 
     const [topSharersMinimised, setTopSharersMinimised] = useState(true); 
+    const [topDonorsMinimised, setTopDonorsMinimised] = useState(true); 
 
 
     useEffect(() => {
@@ -363,6 +364,12 @@ function Index() {
                                     ))}
                                 </tbody>
                             </table>
+                            <img
+                                onClick={() => setTopDonorsMinimised(!topDonorsMinimised)}
+                                className={`down-arrow ${!topDonorsMinimised ? 'rotated' : ''}`}
+                                src={downArrow}
+                                draggable={false} 
+                            />
 
                         </div>
                         <div id="about-container">
