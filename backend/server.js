@@ -11,6 +11,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 
+
 // Set up database 
 const persistentPath = '/data/database.sqlite';
 const fallbackPath = path.join(__dirname, 'database.sqlite');
@@ -162,7 +163,23 @@ app.get('/', (req, res) => {
 
 
 app.post('/referral', (req, res) => {
-    
+    const ref = req.body.ref;
+    const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket.remoteAddress;
+
+    const bannedwords = ['fuck', 'bitch', 'pussy', 'cunt', 'cock', 'slut', 'whore', 'nigger', 'nigga', 'dildo', 'faggot']
+
+    // Check length
+    if (typeof ref !== 'string' || ref.length === 0 || ref.length > 50) return false;
+
+    // Only letters, digits, and hyphens
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(ref)) return false;
+
+    // Check for banned words (case insensitive just in case)
+    const lowerRef = ref.toLowerCase();
+    if (bannedwords.some(word => lowerRef.includes(word))) return false;
+
+    return true;
+
 }); 
 
 

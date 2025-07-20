@@ -60,7 +60,7 @@ function Index() {
 
                 // endpoint /referral (BASE_URL)
 
-                sendReferral();
+                
                 const sendReferral = async () => {
                     try {
                         await fetch(`${BASE_URL}/referral`, {
@@ -74,6 +74,7 @@ function Index() {
                         console.error('Error sending referral:', err);
                     }
                 };
+                sendReferral();
                 
 
             }, 5000);
