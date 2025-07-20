@@ -205,11 +205,21 @@ app.post('/referral', (req, res) => {
 
     ipBlockTracker[ipBlock].push(now);
 
-    /* Now I need to check if the user is already in the database 
+    // Checks if the user is already in the database
+    const exists = db.prepare('SELECT 1 FROM person_referred WHERE ip = ?').get(ip);
+    if (exists) {
+        return false;
+    }
+
+    /*
+
+    */
 
 
 
-    */ 
+
+
+
 
 
     return true;
