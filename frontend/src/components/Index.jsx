@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_live_51RasbSGH1vcrVSr3rgIIWmyj1hRvkn2L92NGP
 
 function Index() {
 
-    const [totalVisitors, setTotalVisitors] = useState(0);
+    const [totalShares, setTotalShares] = useState(0);
 
 
     const [totalDonations, setTotalDonations] = useState(null);
@@ -19,7 +19,7 @@ function Index() {
     const [totalStripe, setTotalStripe] = useState(null);
     
     const [topDonors, setTopDonors] = useState([]);
-
+    const [topSharers, setTopSharers] = useState([]);
 
 
     const [openDropdowns, setOpenDropdowns] = useState({
