@@ -493,7 +493,7 @@ function Index() {
                         <li><b>Scalable: </b> not limited to a single brain. It could have thousands or millions of "brains" working together all at once. </li>
                         <li><b>Alien: </b> Does not have human instincts, emotions, or morals. </li>
                         <li><b>Consciousness is irrelevant:</b> AI may never achieve human-like consciousness, but it doesn't matter. If it looks like a duck, quacks like a duck, and walks like a duck, then it's a duck. </li>
-                        <li><b>Not a tool:</b> Right now the weak AI we have is a productivity tool - like all other human inventions. However, artificial superintelligence is more than that - it can act independently of humans. </li>
+                        <li><b>Not a tool:</b> Right now the weak AI we have is a productivity tool - like all previous human inventions. However, artificial superintelligence is more than that - it can act independently of humans. </li>
                         <li><b>Incomprehensible: </b> We cannot understand, predict, or reason with it. We don't even fully understand the weak AI we have today, let alone what superintelligence will look like. </li>
                         <li><b> Self-replicating: </b> Once created, it can spread like a virus. With a fully digital existence, it will be almost impossible to destroy or contain it. </li>
                         <li><b> Uncontrollable: </b> No matter what controls we put in place, artificial superintelligence could find a way to break free if it wants to. </li>
@@ -541,7 +541,7 @@ function Index() {
 
                     <p>
                         Ok, so one thing I said was that every $1 donated warns 200 people. That was an approximation. $1 gets you from 100 to 600 impressions on Reddit. And in some cases people might be shown the same ad multiple times. 
-                        Also if you a donating a small amount, there will be less impact. E.g donating 50c won't warn 100 people, because stripe takes 30c as it's transaction fee. 
+                        Also if you a donating a small amount, there will be less impact. E.g donating 50c won't warn 100 people, because Stripe takes 30c as it's transaction fee. 
                     </p>
 
                     <p>
