@@ -296,6 +296,15 @@ function Index() {
                             <p>Shares So Far {totalShares} </p>
 
                             <p>Top Sharers: </p>
+                            <table>
+                                {topDonors.map((donor, index) => (
+                                    <tr key={donor.name}>
+                                        <td>#{index + 1}</td>
+                                        <td>{donor.name}</td>
+                                        <td>${(donor.total_donated / 100).toFixed(2)}</td>
+                                    </tr>
+                                ))}
+                            </table>
 
                             {/*
                             
