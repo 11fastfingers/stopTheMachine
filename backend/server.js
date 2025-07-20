@@ -338,21 +338,30 @@ async function getStripeFeeWithRetry(chargeId, currency) {
 
 
 app.get('/info', (req, res) => {
+
+    // donations stuff
     const row1 = db.prepare('SELECT total FROM total_donations WHERE id = 1').get();
-
     const row2 = db.prepare('SELECT total FROM pending WHERE id = 1').get();
-
     const row3 = db.prepare("SELECT total FROM spending_totals WHERE account = 'stripe'").get();
-
     const rows = db.prepare("SELECT name, total_donated FROM donor ORDER BY total_donated DESC LIMIT 50").all().map(row => ({ ...row })); // This spreads the row into a plain object; 
         
+    // sharers stuff
+    const sharerRows = db.prepare(`
+        SELECT name, total 
+        FROM top_sharers 
+        ORDER BY total DESC 
+        LIMIT 50
+    `).all().map(row => ({ ...row }));
+
+
 
 
     res.json({
         total_donations: row1?.total ?? 0, 
         pending: row2?.total ?? 0,
         stripe: row3?.total ?? 0,
-        top_donors: rows   
+        top_donors: rows, 
+        top_sharers: sharerRows 
     });
 });
 

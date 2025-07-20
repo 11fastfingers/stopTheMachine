@@ -17,6 +17,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function Index() {
 
 
+    
+
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -43,8 +45,8 @@ function Index() {
     const [totalStripe, setTotalStripe] = useState(null);
     
     const [topDonors, setTopDonors] = useState([]);
-    const [topSharers, setTopSharers] = useState([]);
-
+    
+    const [topSharers, setTopSharers] = useState("Loading...");
 
 
 
@@ -178,6 +180,11 @@ function Index() {
                 setTotalPending((data.pending ?? 0) / 100);
                 setTotalStripe((data.stripe ?? 0) / 100);
                 setTopDonors(data.top_donors || []);
+
+                setTopSharers(data.top_sharers);
+
+
+
             } catch (err) {
                 console.error('Failed to fetch backend info:', err);
             }
