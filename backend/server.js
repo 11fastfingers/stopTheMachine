@@ -218,7 +218,7 @@ app.post('/referral', (req, res) => {
 
     const referrerExists = db.prepare('SELECT 1 FROM referrer WHERE name = ?').get(ref);
     if (!referrerExists) {
-        const addReferrer = db.prepare('INSERT INTO referrer (name) VALUES (?)');
+        const addReferrer = db.prepare('INSERT INTO referrer (name, total) VALUES (?, 0)');
         addReferrer.run(ref);
     }
 
@@ -243,7 +243,7 @@ app.post('/referral', (req, res) => {
 
     if (currentTotal.total > LowestLeaderboardTotal.total) {
         const updateLeaderboard = db.prepare('UPDATE top_sharers SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
-        
+
         function updateRankings() {
             const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC').all();
         
