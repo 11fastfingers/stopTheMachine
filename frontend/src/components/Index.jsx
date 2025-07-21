@@ -413,14 +413,17 @@ function Index() {
 
                     <h2> How StopTheMachine Operates</h2>
                     <p> A couple of important things to mention. First, i'm the person behind StopTheMachine. Everything here is personally created and maintained by me - and only me. That means <b>I do all the designing, the writing, the programming, the advertising, </b> etc. 
-                        And it will always be just me - no matter what. So the point of this is too keep operating costs as low as possible. This means that 100% of donations go to online awareness ads (donations are launching 22 August). Minor expenses like web hosting and that sort of stuff, that's very cheap and is covered by me personally.    
+                        And it will always be just me - no matter what. 
                     </p>
 
                     <p>
-                        In terms of how it works, basically I do one simple thing. <b>I take in donations and use those donations to run online ads </b> warning people about the risks of AI. That's it. Every donation and every ad purchase is logged publicly, so you can match things up. Additionally, I screen record every single ad purchase I make. Those screen recordings are also publicly available.  
-                        
-
+                        <b>Donations launch 22 August. </b> 100% of donations go to online awareness ads warning people about the risks of AI. Any additional operating expenses are covered by me personally, or separately funded.  
+                        Every donation and every ad purchase will be logged publicly, with all my accounting information fully public. Additionally, I will screen record every single ad purchase I make and put those up.  
                     </p>
+
+                       
+                        
+                    
 
                     <h2> Legal Status</h2> 
                         <p>
