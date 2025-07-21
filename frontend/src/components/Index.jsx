@@ -501,7 +501,7 @@ function Index() {
  
 
 
-                    <h2> What Artificial Superintelligence will look like </h2>
+                    <h2> What Artificial Superintelligence will look like: </h2>
 
                     <ul> 
                         <li><b>Exponential Improvement: </b> the rate of improvement: Exponential. Right now we have very weak AI, but it is improving so rapidly that it is expected to reach superintelligence within 5 to 15 years. </li>
