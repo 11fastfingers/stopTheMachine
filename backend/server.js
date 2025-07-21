@@ -245,19 +245,17 @@ app.post('/referral', (req, res) => {
         const updateLeaderboard = db.prepare('UPDATE top_sharers SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
 
         function updateRankings() {
-            const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC').all();
+            const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC LIMIT 50').all();
         
             const updateTemp = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
             const updateFinal = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
         
-            // Step 1: Assign temporary negative ranks to avoid UNIQUE constraint collisions
             top.forEach((row, index) => {
-                updateTemp.run(-(index + 1), row.name);
+                updateTemp.run(-(index + 1), row.name); // Temporary negative ranks
             });
         
-            // Step 2: Reassign correct positive ranks
             top.forEach((row, index) => {
-                updateFinal.run(index + 1, row.name);
+                updateFinal.run(index + 1, row.name); // Final Positive ranks 
             });
         }
 
