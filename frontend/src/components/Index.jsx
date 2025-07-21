@@ -412,7 +412,7 @@ function Index() {
 
                     <h2> How StopTheMachine Operates</h2>
                     <p> A couple of important things to mention. First, i'm the person behind StopTheMachine. Everything here is personally created and maintained by me - and only me. That means <b>I do all the designing, the writing, the programming, the advertising, </b> etc. 
-                        And it will always be just me - no matter what. So the point of this is too keep operating costs as low as possible, so that 100% of donations go to online awareness ads. Minor expenses like web hosting and that sort of stuff, that's very cheap and is covered by me personally.    
+                        And it will always be just me - no matter what. So the point of this is too keep operating costs as low as possible. This means that 100% of donations go to online awareness ads (donations are launching 22 August). Minor expenses like web hosting and that sort of stuff, that's very cheap and is covered by me personally.    
                     </p>
 
                     <p>
