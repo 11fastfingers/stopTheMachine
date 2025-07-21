@@ -385,14 +385,15 @@ function Index() {
                                 draggable={false} 
                             />
                         </div>
-                        <div id="about-container">
-                            <a id="about" onClick={aboutAction} > about</a>
-                        </div>
+
 
                         */}
                         
                 </div>
 
+                <div id="about-container">
+                            <a id="about" onClick={aboutAction} > about</a>
+                </div>
             </div>
             <div id="about-page" style={{display: 'none'}}>
                 <div className="text"> 
