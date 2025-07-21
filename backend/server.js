@@ -237,38 +237,45 @@ app.post('/referral', (req, res) => {
        Now I need to check if the current referrer has a total greater than the total for the 50th spot in the leaderboard. 
     */
 
-    const currentTotal = db.prepare('SELECT total FROM referrer WHERE name = ?').get(ref); 
-    
-    const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_sharers WHERE rank = 50').get(); 
+       
+    // Get current total for this referrer
+    const currentTotal = db.prepare('SELECT total FROM referrer WHERE name = ?').get(ref);
 
-    if (currentTotal.total > LowestLeaderboardTotal.total) {
-        // First, check if they're already on the leaderboard
+    // Get the actual lowest person on the leaderboard
+    const lowestEntry = db.prepare(`
+        SELECT name, total 
+        FROM top_sharers 
+        ORDER BY total ASC, rank DESC 
+        LIMIT 1
+    `).get();
+
+    if (!lowestEntry || currentTotal.total > lowestEntry.total) {
         const existingRank = db.prepare('SELECT rank FROM top_sharers WHERE name = ?').get(ref);
-    
+
         if (existingRank) {
-            // Just update their total
+            // Already on leaderboard, just update total
             db.prepare('UPDATE top_sharers SET total = ? WHERE name = ?').run(currentTotal.total, ref);
         } else {
-            // Replace the 50th ranked user
-            db.prepare('DELETE FROM top_sharers WHERE rank = 50').run();
+            // New entrant, remove lowest and insert
+            if (lowestEntry) {
+                db.prepare('DELETE FROM top_sharers WHERE name = ?').run(lowestEntry.name);
+            }
             db.prepare('INSERT INTO top_sharers (name, total) VALUES (?, ?)').run(ref, currentTotal.total);
         }
-    
-        // Update rankings
-        function updateRankings() {
-            const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC LIMIT 50').all();
-    
-            // Clear all ranks (in case of reordering)
-            const updateRank = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
-    
-            top.forEach((row, index) => {
-                updateRank.run(index + 1, row.name);
-            });
-        }
-    
-        updateRankings();
-    }
 
+        // Recalculate rankings
+        const top = db.prepare(`
+            SELECT name, total 
+            FROM top_sharers 
+            ORDER BY total DESC, name ASC 
+            LIMIT 50
+        `).all();
+
+        const updateRank = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
+        top.forEach((row, index) => {
+            updateRank.run(index + 1, row.name);
+        });
+    }
 
 
     return true;
