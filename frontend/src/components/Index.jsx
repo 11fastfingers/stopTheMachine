@@ -339,8 +339,10 @@ function Index() {
 
                         </div>
                         <br></br>
+
+                        {/*}
                         <div>
-                            <h3>Donate</h3>
+                            <h3>Donate </h3>
 
                             <div><b>$1 Warns 200 People</b></div>
                             <div>100% of donations fund digital ads warning people about AI risks. </div>
@@ -386,6 +388,8 @@ function Index() {
                         <div id="about-container">
                             <a id="about" onClick={aboutAction} > about</a>
                         </div>
+
+                        */}
                         
                 </div>
 
