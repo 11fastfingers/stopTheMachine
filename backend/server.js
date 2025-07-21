@@ -242,24 +242,31 @@ app.post('/referral', (req, res) => {
     const LowestLeaderboardTotal = db.prepare('SELECT total FROM top_sharers WHERE rank = 50').get(); 
 
     if (currentTotal.total > LowestLeaderboardTotal.total) {
-        const updateLeaderboard = db.prepare('UPDATE top_sharers SET name = ?, total = ? WHERE rank = 50').run(ref, currentTotal.total); 
-
+        // First, check if they're already on the leaderboard
+        const existingRank = db.prepare('SELECT rank FROM top_sharers WHERE name = ?').get(ref);
+    
+        if (existingRank) {
+            // Just update their total
+            db.prepare('UPDATE top_sharers SET total = ? WHERE name = ?').run(currentTotal.total, ref);
+        } else {
+            // Replace the 50th ranked user
+            db.prepare('DELETE FROM top_sharers WHERE rank = 50').run();
+            db.prepare('INSERT INTO top_sharers (name, total) VALUES (?, ?)').run(ref, currentTotal.total);
+        }
+    
+        // Update rankings
         function updateRankings() {
             const top = db.prepare('SELECT name, total FROM top_sharers ORDER BY total DESC LIMIT 50').all();
-        
-            const updateTemp = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
-            const updateFinal = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
-        
+    
+            // Clear all ranks (in case of reordering)
+            const updateRank = db.prepare('UPDATE top_sharers SET rank = ? WHERE name = ?');
+    
             top.forEach((row, index) => {
-                updateTemp.run(-(index + 1), row.name); // Temporary negative ranks
-            });
-        
-            top.forEach((row, index) => {
-                updateFinal.run(index + 1, row.name); // Final Positive ranks 
+                updateRank.run(index + 1, row.name);
             });
         }
-
-        updateRankings(); 
+    
+        updateRankings();
     }
 
 
