@@ -61,7 +61,7 @@ function Index() {
             .join(' ');                              // rejoin with spaces
     }
 
- <<<<<>>>>>></>
+ 
     useEffect(() => {
         const ref = localStorage.getItem('referrer');
         if (ref) {
@@ -419,13 +419,11 @@ function Index() {
 
                     <h2> Legal Status</h2> 
                         <p>
-                        Another thing to mention: StopTheMachine is a non-profit initiative of an Australian  <b>sole-trader</b> registered under the name "Beta Products". This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
+                        Another thing to mention: StopTheMachine is a <b>sole-trader</b>. This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
                         - could send me to jail. My personal assets could be seized, I could be sued, etc.  
                         </p>
                         <p>
                         I'm not registered as a charity. Unfortunately, that means <b>donations aren't tax deductible.</b> If I was a charity, that would mean an expensive board of directors, less control, and less speed. This way is simpler and cheaper.
-                        In regards to the relationship between Beta and StopTheMachine, basically it works like this. If I need to I can transfer money from Beta to StopTheMachine. However, money cannot go the other way around. Another thing, all parts of StopTheMachine are <b>in the public domain.</b> They can be freely used, shared, copied, whatever. The code is also <u>open source.</u>  
-                          However, this does not apply to separate for-profit parts of Beta, which are proprietary. 
                         </p>
 
                     <h2> Terms of Use </h2>
