@@ -61,7 +61,7 @@ function Index() {
             .join(' ');                              // rejoin with spaces
     }
 
-
+ <<<<<>>>>>></>
     useEffect(() => {
         const ref = localStorage.getItem('referrer');
         if (ref) {
