@@ -451,10 +451,10 @@ function Index() {
 
                     <p>
 
-                        Ok, so there are no logins or accounts or anything like that. So I collect very little information. I store basic information about donations, and that information is public. But it's <b>completely anonymous</b>. People might see that "Bob" donated $100, but they don't know who Bob is. 
+                        Ok, so there are no logins or accounts or anything like that. So I collect very little information. I will store basic information about donations, which will be public. But it's <b>completely anonymous</b>. People might see that "Bob" donated $100, but they don't know who Bob is. 
 
-                        I also need to determine unique visitors to the site, for the "Sharer leaderboard" to work. So <b> I collect IP addresses </b> to do that. However, that IP is encrypted. So the worst thing that can happen is this: 
-                        if I get hacked someone can see that this IP address visited the site at some point in time. That's it. They don't know anything else, not who you are, or your email address, or if you visited the site once or 100 times, or if you donated or not. 
+                        I also need to determine unique visitors to the site, for the "Sharer leaderboard" to work. So <b> I collect IP addresses </b> to do that. However, that IP will be encrypted. So the worst thing that can happen is this: 
+                        if I get hacked someone can see that this IP address visited the site at some point in time. That's it. They don't know anything else, not who you are, or if you visited the site once or 100 times, or if you shared a link, or if you donated or not. 
                     </p>
 
                     <h2> Influences</h2>
