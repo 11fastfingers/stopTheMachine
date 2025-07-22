@@ -419,7 +419,7 @@ function Index() {
                     </p>
 
                     <p>
-                        <b>Donations launch 22 August. </b> 100% of donations go to online awareness ads warning people about the risks of AI. Any additional operating expenses are covered by me personally, or separately funded.  
+                        <b>Donations launch 22 August, 2025, . </b> 100% of donations go to online awareness ads warning people about the risks of AI. Any additional operating expenses are covered by me personally, or separately funded.  
                         Every donation and every ad purchase will be logged publicly. Additionally, I will screen record every single ad purchase I make and put those up.  
                     </p>
 
@@ -429,7 +429,7 @@ function Index() {
 
                     <h2> Legal Status</h2> 
                         <p>
-                        Another thing to mention: StopTheMachine is a <b>sole-trader</b>. This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
+                        Another thing to mention: StopTheMachine is at 15:00 UTC <b>sole-trader</b>. This means that I am personally responsible for the promise that 100% of donations go to online ads. <b>I have skin in the game.</b> Any misappropriation of donations - to so much as buy a cup of coffee
                         - could send me to jail. My personal assets could be seized, I could be sued, etc.  
                         </p>
                         <p>
