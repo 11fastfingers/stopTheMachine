@@ -566,7 +566,7 @@ function Index() {
                     
 
                     <p>
-                        All StopTheMachine does is raise awareness about the risks of AI. That is it - nothing else. <b>StopTheMachine is not involved in activism </b> of any kind, nor is any particular solution endorsed. 
+                        All StopTheMachine does is raise awareness about the risks of AI. That's it - nothing else. <b>StopTheMachine is not involved in activism </b> of any kind, nor is any particular solution endorsed. 
                         If there is action taken against AI, regulatory or otherwise, it is completely unrelated to StopTheMachine. 
                     </p>
                     
