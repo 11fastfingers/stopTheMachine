@@ -37,7 +37,7 @@ function Index() {
     const [referralError, setReferralError] = useState(0);
 
 
-    const [totalShares, setTotalShares] = useState(0);
+    const [totalShares, setTotalShares] = useState("loading...");
 
 
     const [totalDonations, setTotalDonations] = useState(null);
