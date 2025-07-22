@@ -195,6 +195,8 @@ function Index() {
 
                 setTopSharers(data.top_sharers);
 
+                setTotalShares(data.sharesSoFar); 
+
 
 
             } catch (err) {

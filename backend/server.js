@@ -375,7 +375,9 @@ app.get('/info', (req, res) => {
         LIMIT 50
     `).all().map(row => ({ ...row }));
 
-
+    const sharesSoFar = db.prepare(`
+        SELECT total FROM shares_so_far WHERE id = 1
+    `).get();
 
 
     res.json({
@@ -383,7 +385,9 @@ app.get('/info', (req, res) => {
         pending: row2?.total ?? 0,
         stripe: row3?.total ?? 0,
         top_donors: rows, 
-        top_sharers: sharerRows 
+        top_sharers: sharerRows, 
+        sharesSoFar: sharesSoFar.total
+
     });
 });
 
