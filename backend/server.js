@@ -376,7 +376,7 @@ app.get('/info', (req, res) => {
     `).all().map(row => ({ ...row }));
 
     const sharesSoFar = db.prepare(`
-        SELECT SUM(total) FROM referrer;
+        SELECT SUM(total) AS total FROM referrer;
     `).get();
 
 
