@@ -420,7 +420,7 @@ function Index() {
 
                     <p>
                         <b>Donations launch 22 August. </b> 100% of donations go to online awareness ads warning people about the risks of AI. Any additional operating expenses are covered by me personally, or separately funded.  
-                        Every donation and every ad purchase will be logged publicly. All accounting information - fully public. Additionally, I will screen record every single ad purchase I make and put those up.  
+                        Every donation and every ad purchase will be logged publicly. Additionally, I will screen record every single ad purchase I make and put those up.  
                     </p>
 
                        
