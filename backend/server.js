@@ -370,7 +370,7 @@ app.get('/info', (req, res) => {
     // sharers stuff
     const sharerRows = db.prepare(`
         SELECT name, total 
-        FROM top_sharers 
+        FROM referrer 
         ORDER BY total DESC 
         LIMIT 50
     `).all().map(row => ({ ...row }));
