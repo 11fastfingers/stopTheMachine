@@ -237,9 +237,14 @@ app.post('/referral', (req, res) => {
        Now I need to check if the current referrer has a total greater than the total for the 50th spot in the leaderboard. 
     */
 
-       
+
     // Get current total for this referrer
     const currentTotal = db.prepare('SELECT total FROM referrer WHERE name = ?').get(ref);
+
+
+
+    {/* complex stuff doesn't work yet
+
 
     // Get the actual lowest person on the leaderboard
     const lowestEntry = db.prepare(`
@@ -248,7 +253,6 @@ app.post('/referral', (req, res) => {
         ORDER BY total ASC, rank DESC 
         LIMIT 1
     `).get();
-
     if (!lowestEntry || currentTotal.total > lowestEntry.total) {
         const existingRank = db.prepare('SELECT rank FROM top_sharers WHERE name = ?').get(ref);
 
@@ -276,7 +280,7 @@ app.post('/referral', (req, res) => {
             updateRank.run(index + 1, row.name);
         });
     }
-
+    */}
 
     return true;
 
