@@ -213,6 +213,79 @@ BEGIN
 END;
 
 
+CREATE TRIGGER increment_shares_so_far_after_referrer_insert
+AFTER INSERT ON referrer
+BEGIN
+    UPDATE shares_so_far
+    SET total = total + 1
+    WHERE id = 1;
+END;
+
+
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('banana', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('black-lives-matter', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('water-is-life', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('ai-took-my-job', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('save-the-planet', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('universal-basic-income', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('woke-af', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('make-america-great-again', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('we-are-the-ants', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('ai-saves-lives', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('equal-pay-for-equal-work', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('jesus-will-save-us', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('memes-against-the-machine', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('I-like-pizza', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('swifties-unite', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('bring-it-on', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('beep-boop', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('upgrade-humanity', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('save-the-children', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('the-awakening', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('ai-slop-everywhere', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('hallucination', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('stop-the-deepfakes', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('ai-art-is-theft', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('james-sucks', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('stop-fear-mongering', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('ai-will-create-jobs', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('fake-news', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('mischief-manage', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('save-the-artists', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('tech-for-good', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('coffee-first', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('tax-the-rich', 0);
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('echo-chamber', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('data-privacy-matters', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('information-overload', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('mental-health-stigma', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('save-google-search', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('winter-is-coming', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('the-future-is-now', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('ai-for-good', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('augment-not-replace', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('rise-up', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('check-your-privilege', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('beyond-binary', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('love-is-love', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('legalise-human-ai-marriage', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('fight-facism', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('end-racism', 0); 
+INSERT OR IGNORE INTO referrer (name, total) VALUES ('no-more-tariffs', 0); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 
