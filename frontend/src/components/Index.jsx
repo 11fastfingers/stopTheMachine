@@ -96,29 +96,38 @@ function Index() {
             return () => clearTimeout(timer);
         }
     }, []);
-    
     useEffect(() => {
-        const raw = referralName.toLowerCase();
-      
-        const containsBannedWord = bannedwords.some(word => raw.includes(word));
-        const containsInvalidChars = /[^a-z0-9\s]/i.test(referralName); // only letters, digits, spaces allowed
-        const isTooLong = referralName.length > 24;
-      
-        if (containsBannedWord || containsInvalidChars || isTooLong) {
+        // Raw length check (disallow input longer than 24 chars immediately)
+        if (referralName.length > 24) {
           setValidReferral(false);
           setNormalizedName('');
-        } else {
-          setValidReferral(true);
-          const clean = referralName
-            .toLowerCase()
-            .trim()
-            .replace(/\s+/g, ' ')
-            .replace(/ /g, '-')
-            .replace(/[^a-z0-9-]/g, '')
-            .slice(0, 24);
-          setNormalizedName(clean);
+          return;
         }
+      
+        // Proceed with trimmed and cleaned validation
+        const trimmed = referralName.toLowerCase().trim();
+      
+        const containsBannedWord = bannedwords.some(word => trimmed.includes(word));
+        const containsInvalidChars = /[^a-z0-9\s]/i.test(trimmed);
+      
+        if (containsBannedWord || containsInvalidChars) {
+          setValidReferral(false);
+          setNormalizedName('');
+          return;
+        }
+      
+        // If all checks pass, normalize and set valid
+        setValidReferral(true);
+      
+        const clean = trimmed
+          .replace(/\s+/g, ' ')    // collapse multiple spaces
+          .replace(/ /g, '-')      // spaces to dashes
+          .replace(/[^a-z0-9-]/g, '') // remove invalid chars except dash
+          .slice(0, 24);           // limit length
+      
+        setNormalizedName(clean);
       }, [referralName]);
+      
 
     useEffect(() => {
         const pathname = location.pathname;
