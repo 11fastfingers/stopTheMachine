@@ -302,7 +302,8 @@ function Index() {
                             <code> stopthemachine.org/john-smith </code>  
                             Each time a new person visits your link, "John Smith" will rise on the leaderboard.
                             </p>
-
+                            <span> <a>stopthemachine.org/{normalizedName}</a> </span>
+                            <br></br>
                             <input 
                                 type="text" 
                                 name="nope"
@@ -315,7 +316,7 @@ function Index() {
                                 autoCorrect="off"
                                 spellCheck="false"
                             />
-                            <span> <a>stopthemachine.org/{normalizedName}</a> </span>
+                            
 
                             <button 
                                 onClick={() => handleCopy(normalizedName)}
