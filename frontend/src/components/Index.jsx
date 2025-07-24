@@ -98,7 +98,7 @@ function Index() {
     }, []);
     useEffect(() => {
         // Raw length check (disallow input longer than 24 chars immediately)
-        if (referralName.length > 24) {
+        if (referralName.length > 23) {
           setValidReferral(false);
           setNormalizedName('');
           return;
