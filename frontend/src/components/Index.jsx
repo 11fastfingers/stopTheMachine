@@ -302,8 +302,8 @@ function Index() {
                             <code> stopthemachine.org/john-smith </code>  
                             Each time a new person visits your link, "John Smith" will rise on the leaderboard.
                             </p>
-                            <span> <a>stopthemachine.org/{normalizedName}</a> </span>
-                            <br></br>
+                            <span style={{ display: 'block' }}> <a>stopthemachine.org/{normalizedName}</a> </span>
+                            
                             <input 
                                 type="text" 
                                 name="nope"
