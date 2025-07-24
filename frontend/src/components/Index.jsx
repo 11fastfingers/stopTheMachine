@@ -96,14 +96,15 @@ function Index() {
             return () => clearTimeout(timer);
         }
     }, []);
-
+    
     useEffect(() => {
         const raw = referralName.toLowerCase();
-        
+      
         const containsBannedWord = bannedwords.some(word => raw.includes(word));
-        const containsInvalidChars = /[^a-z0-9\s]/i.test(referralName); // disallow anything not letter, digit, or space
-
-        if (containsBannedWord || containsInvalidChars) {
+        const containsInvalidChars = /[^a-z0-9\s]/i.test(referralName); // only letters, digits, spaces allowed
+        const isTooLong = referralName.length > 24;
+      
+        if (containsBannedWord || containsInvalidChars || isTooLong) {
           setValidReferral(false);
           setNormalizedName('');
         } else {
@@ -114,11 +115,10 @@ function Index() {
             .replace(/\s+/g, ' ')
             .replace(/ /g, '-')
             .replace(/[^a-z0-9-]/g, '')
-            .slice(0, 32);
+            .slice(0, 24);
           setNormalizedName(clean);
         }
-    }, [referralName]);
-
+      }, [referralName]);
 
     useEffect(() => {
         const pathname = location.pathname;
