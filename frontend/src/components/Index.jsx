@@ -324,7 +324,7 @@ function Index() {
                                 aria-label="Copy link"
                                 id="copy-button"
                             >
-                                🔗
+                                <div id="bigger">🔗</div>
                             </button>           
 
                             <p>Shares So Far: {totalShares} </p>
