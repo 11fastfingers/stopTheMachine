@@ -114,7 +114,7 @@ function Index() {
             .replace(/\s+/g, ' ')
             .replace(/ /g, '-')
             .replace(/[^a-z0-9-]/g, '')
-            .slice(0, 40);
+            .slice(0, 32);
           setNormalizedName(clean);
         }
     }, [referralName]);
