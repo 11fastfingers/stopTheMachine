@@ -316,7 +316,6 @@ function Index() {
                                 autoCorrect="off"
                                 spellCheck="false"
                             />
-                            
 
                             <button 
                                 onClick={() => handleCopy(normalizedName)}
@@ -325,7 +324,7 @@ function Index() {
                                 id="copy-button"
                             >
                                 <div id="bigger">🔗</div>
-                            </button>           
+                            </button>    
 
                             <p>Shares So Far: {totalShares} </p>
 
@@ -431,7 +430,7 @@ function Index() {
                     </p>
 
                     <p>
-                        <b>Donations launch 22 August, 2025, 15:00 UCT. </b> 100% of donations go to online awareness ads warning people about the risks of AI. Any additional operating expenses are covered by me personally, or separately funded.  
+                        <b>Donations launch 22 August, 2025, 15:00 UCT. </b> 100% of donations go to online awareness ads warning people about the risks of AI. Any additional operating expenses are covered by me personally, or are separately funded.  
                         Every donation and every ad purchase will be logged publicly. Additionally, I will screen record every single ad purchase.  
                     </p>
 
